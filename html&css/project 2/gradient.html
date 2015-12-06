@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<HTML>
+<head>
+<meta charset="UTF-8" />
+<title>Tytuł</title>
+<link rel="stylesheet" type="text/css" href="left.css" />
+<link rel="stylesheet" type="text/css" href="right.css" />
+<link rel="stylesheet" type="text/css" href="main.css" />
+
+<style>
+
+</style>
+</head>
+<body>
+<header>
+	<h1>Statyczne strony internetowe II</h1>
+</header>
+<div id="main">
+	<div id="left">
+		<div>
+			<ul id="menu">	
+				<li><a href="index.html">Main</a></li>
+				<li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+				<li><a href="mapa.html">Mapa odsyłączy</a></li>
+				<li><a href="formularze.html">Formularze</a></li>
+				<li><a href="filmy.html">Filmy</a></li>
+				<li><a href="gradient.html">Gradienty i cienie</a></li>	
+			</ul>
+		</div>	
+		<div id="newsletter">
+			<h2>Newsletter</h2>
+			
+			<input placeholder="Imię" style="left:-2px;">	
+			<input placeholder="E-mail" style="left:-2px;" required type="email" >
+			<input type="submit"  value="Zapisz się"  >
+		</div>
+	</div>
+	<div id="right">
+		<img style="width:100%;height:300px;" src="slider/gradient.jpg" alt="filmy" >
+		<h3>Gradient</h3>
+		<p>Gradienty są to kolory tła jakie ustawiamy na tle danego elementu. 
+		Załóżmy, że chcemy zrobić na divie dwa kolory, żółty wpadający w czarny.
+		W stylach tego diva piszemy <span class="formularze" >background: -*-linear-gradient(yellow,black);</span>.
+		Możemy także zrobić aby gradient zaczynał się w konkretnym momęcie oraz kończył drugi przykład: 
+		<span class="formularze" >background: -*-linear-gradient(white 0px, white 50px, red 50px, red 100px);</span>.</p>
+		<p>
+			Domyślnie gradienty zaczynają się od góry, w dół, aby to zmienić dopisujemy <span class="formularze" >@deg</span>, gdzie @ to ilość stopni o które chcemy obrócić gradient.
+			W miejscu * wpisujemy <span class="formularze" >webkit</span>, <span class="formularze" >o</span>, <span class="formularze" >moz</span> oraz <span class="formularze" >ms</span> jest to po to aby działało na różnych przeglądarkach.
+		</p>
+		<div style="background:-webkit-linear-gradient(yellow,black);-o-linear-gradient(yellow,black);-moz-linear-gradient(yellow,black);-ms-linear-gradient(yellow,black);width:400px; height:100px;margin:20px auto; ">
+			<p>PRZYKŁAD PIERWSZY</p>
+		</div>
+		<div style="background: -webkit-linear-gradient(white 0px, white 50px, red 50px, red 100px);-ms-linear-gradient(white 0px, white 50px, red 50px, red 100px)-o-linear-gradient(white 0px, white 50px, red 50px, red 100px)-moz-linear-gradient(white 0px, white 50px, red 50px, red 100px); width:400px; height:100px;margin:20px auto;">
+			<p>PRZYKŁAD DRUGI</p>
+		</div>
+		<h3>Cienie</h3>
+		<p>Aby nadać cień na text lub obiekt używamy <span class="formularze" >text/box-shadow{...}</span> z czterema parametrami, które kolejno odpowiadają za położenie poziome cienia, pionowe położenie, rozmycie, kolor cienia.
+		<br><span class="formularze" >Przykład: box-shadow: 5px 0px 5px blue oraz text-shadow: 5px 0px 5px red;</span> </p>
+		<p></p>
+		<div style="box-shadow: 5px 0px 5px blue; text-shadow: 5px 0px 5px red; width: 200px; height:50px; margin:20px auto;">
+			<p>CIEŃ NAD TEKSTEM</p>
+		</div>
+	</div>
+</div>
+<footer>
+	<p>Wszystkie prawa zastrzeżone</p>
+	<p>Projekt i wdrożenie Kornel Miszczak</p>
+</footer>
+</body>
+</HTML>

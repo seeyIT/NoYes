@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+<meta charset="UTF-8">
+<meta name="description" content="bardzo ciekawa strona" >
+<meta name="author" content="Kornel">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+<link rel="stylesheet" href="a.css" />
+<title> asd</title>
+</head>
+<body>
+<div id="center">
+<div id="kotwice">
+<header><ul><li><a href="html.html">HTML 5</a></li><li><a href="index.html">MENU GŁÓWNE</a></li><li><a href="css.html">CSS 3</a></li></ul></header>
+</div>
+
+<div class="dosrodkowania">
+<h1>TABELE</h1>
+<h2>W tworzeniu tabeli używamy następujących znaczników</h2>
+<div class="listawtabelach">
+<ul>
+<li><strong>table </strong>- jest to główny znacznik, który rozpoczyna i kończy daną tabele.</li>
+<li><strong>tr (table row) </strong>- jest to znacznik wiersza, każde <strong>tr</strong> to odobny wiersz</li>
+<li><strong>th (table head)</strong> - jest to taki sam znacznik jak tr, lecz stosuje się go jako wiersz nagłówkowy.</li>
+<li><strong>td </strong>- jest to pojedyncza komórka, w wierszu.</li>
+<li><strong>tfoot </strong>- stopka tabeli.</li>
+</ul>
+</div>
+<h3>Aby łączyć dwie komórki w jedną wykorzystujamy następujące właściwości</h3>
+<div class="listawtabelach"><ul><li><strong>colspan </strong>- łączy ze sobą dwie komórki w poziomie</li>
+<li><strong>rowspan</strong> - łączy ze sobą dwie komórki w pionie</li></ul>
+</div>
+<h2 id="sdfplsdpflspdlf">Przykładowe tabele</h2>
+</div>
+<div id="tabele">
+<p class="kod">Kod:</p>
+<div>
+<pre>
+&#60;table&#62;
+
+	&#60;tr&#62;
+	
+		&#60;td&#62;Komórka nr 1&#60;/td&#62;
+		
+		&#60;td&#62;Komórka nr 2&#60;/td&#62;
+		
+	&#60;/tr&#62;
+	
+	&#60;tr&#62;
+	
+		&#60;td&#62;Komórka nr 3&#60;/td&#62;
+		
+		&#60;td&#62;Komórka nr 4&#60;/td&#62;
+		
+	&#60;/tr&#62;
+	
+&#60;/table&#62;
+</pre>
+</div>
+<p class="efekt">Efekt:</p>
+<table>
+<tr><td>Komórka nr 1</td><td>Komórka nr 2</td></tr>
+<tr><td>Komórka nr 3</td><td>Komórka nr 4</td></tr>
+</table>
+<p class="kod">Kod:</p>
+<div>
+<pre>
+&#60;table&#62;
+
+	&#60;tr&#62;	
+	
+		&#60;td colspan="2"&#62;Komórka nr 1&#60;/td&#62;
+		
+	&#60;/tr&#62;
+	
+	&#60;tr&#62;
+	
+		&#60;td&#62;Komórka nr 2&#60;/td&#62;
+		
+		&#60;td&#62;Komórka nr 3&#60;/td&#62;
+		
+	&#60;/tr&#62;
+	
+&#60;/table&#62;
+</pre>
+</div>
+<p class="efekt">Efekt:</p>
+<table>
+<tr><td colspan="2">Komórka nr 1</td></tr>
+<tr><td>Komórka nr 2</td><td>Komórka nr 3</td></tr>
+</table>
+<p class="kod">Kod:</p>
+<div>
+<pre>
+&#60;table&#62;
+
+	&#60;tr&#62;
+	
+		&#60;td rowspan="2"&#62; Komórka nr 1&#60;/td&#62;
+		
+		&#60;td&#62;Komórka nr 2&#60;/td&#62;
+		
+	&#60;/tr&#62;
+	
+	&#60;tr&#62;
+	
+		&#60;td&#62;Komórka nr 3&#60;/td&#62;
+		
+	&#60;/tr&#62;
+	
+&#60;/table&#62;
+</pre>
+</div>
+<p class="efekt">Efekt:</p>
+<table>
+<tr><td rowspan="2">Komórka nr 1</td><td>Komórka nr 2</td></tr>
+<tr><td>Komórka nr 3</td></tr>
+</table>
+</div>
+
+<footer>seeyIT</footer>
+</div>
+</body>
+</html>

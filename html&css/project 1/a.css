@@ -1,0 +1,276 @@
+#center
+{
+padding:10px;
+width:980px;
+margin:0 auto;
+background-color:#FFFFA0;
+font-size:20px;
+}
+div{width:980px;
+margin:0 auto;
+background-color:transparent;
+}
+
+body{
+bbackground-image: url('w.jpg');
+background-color:#964B00;
+margin:0 auto;
+/*background-color:#1059FF;*/
+
+height:100%;
+}
+
+footer{
+margin: 0 auto;
+text-align:center;
+background-color:#C0FF18;
+width:980px;
+clear:both;
+height:20px;
+margin-top:20px;
+border:blue 2px solid;
+height:30px;
+font-size:24px;
+}
+
+
+header{position:fixed;
+margin-top:-25px;
+margin-left:-27px;
+color:black;}
+
+header ul{
+list-style:none;
+display:inline-block;
+text-align:center;
+color:black;
+}
+
+header li{
+width: 315px;
+border:2px purple solid; 
+margin:1px;
+background-color:white;
+float:left;
+}
+
+
+
+#tabele table, td
+	{
+		padding: 5px;
+		margin:0 auto;
+		border:3px red solid;
+		text-align:center;
+	}
+#tabele div{
+width: 400px;
+background-color:blue;
+margin:20px 0px 20px 50px ;
+border:2px yellow solid;
+}
+
+#tabele p{
+width:50px;
+font-size:20px;
+}
+
+.efekt{
+	
+	width:100px;
+	margin:0 auto;
+	margin-bottom:10px;
+}
+
+.kod{
+	margin-left:50px;
+}
+
+ul{
+list-style:none;
+}
+.listawtabelach
+{
+font-size:20px;
+width:500px;
+text-align:left;
+
+}
+.listawtabelach li
+{
+margin:5px 0;
+
+}
+#sdfplsdpflspdlf /*nagłowek nad przykladowe tablice i chyba listy*/
+{
+	width:750px;
+	border-top:1px black solid;
+	margin:0 auto;
+	padding-top:20px;
+
+}
+
+#kotwice a:link{
+text-decoration:none;
+}
+
+#kotwice  a:hover {
+background-color:black;
+}
+#kotwice a{
+font-size:20px;
+color:red;
+display:block
+}
+
+
+.zasady{
+width: 400px;
+padding-left:50px;
+text-align:left;
+
+
+
+}
+.zasady dd{
+padding:0 0 18px 0;
+
+}
+
+.zasady dt{
+
+text-decoration:underline;
+
+}
+
+#znacznikitabelka{margin:0 auto;
+}
+#bylecoto{
+width:400px;
+padding-left:40px;
+text-align:left;
+
+}
+#bbylecoto{
+width:900px;
+padding-left:40px;
+text-align:left;
+
+}
+
+#selektor7{
+width:880px;
+margin:0 auto;
+text-align:left;
+
+}
+
+
+
+#css1{
+width:250px;
+float:left;
+display:table-cell;
+}
+#css2{
+width:250px;
+margin:0 auto;
+display:table-cell;
+}
+#css3{
+width:250px;
+float:right;
+display:table-cell;
+}
+.ramkadolist{
+width:400px;
+border:2px black solid;
+background-color:white;
+text-align:left;
+}
+
+#listy 
+#listy div{
+width: 500px;
+background-color:blue;
+margin:20px 0px 20px 50px ;
+border:2px yellow solid;
+}
+
+#listy p{
+width:50px;
+font-size:20px;
+}
+
+.deflist{
+width:400px;
+background-color:blue;
+margin-left:50px;
+border:2px yellow solid;
+}
+.ramkadolist dl{
+margin-left:50px;
+}
+
+.dosrodkowania{
+text-align:center;
+background-color:transparent;
+}
+
+#arkusze{
+width:900px;
+
+
+}
+#ee{text-align:center;}
+#qq{margin:0 auto;}
+h1{
+text-transform:uppercase;
+text-decoration:underline;
+color:blue;
+}
+
+#kotwice a:link{
+text-decoration:none;
+
+}
+#kotwice2 a{
+font-size:20px;
+color:red;
+}
+
+pre{
+font-size:14px;
+}
+
+#eeeeeeee{
+list-style:circle;
+
+}
+#maincss{
+
+margin:0 auto;
+text-align:center;
+}
+#maincss figure{
+margin:0 auto;
+width:980px;
+height:250px;
+}
+
+#pp{
+margin:0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

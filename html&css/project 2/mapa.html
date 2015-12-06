@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<HTML>
+<head>
+<meta charset="UTF-8" />
+<title>Tytuł</title>
+<link rel="stylesheet" type="text/css" href="left.css" />
+<link rel="stylesheet" type="text/css" href="right.css" />
+<link rel="stylesheet" type="text/css" href="main.css" />
+
+<style>
+
+</style>
+</head>
+<body>
+<header>
+	<h1>Statyczne strony internetowe II</h1>
+</header>
+<div id="main">
+	<div id="left">
+		<div>
+			<ul id="menu">	
+				<li><a href="index.html">Main</a></li>
+				<li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+				<li><a href="mapa.html">Mapa odsyłączy</a></li>
+				<li><a href="formularze.html">Formularze</a></li>
+				<li><a href="filmy.html">Filmy</a></li>
+				<li><a href="gradient.html">Gradienty i cienie</a></li>	
+			</ul>
+		</div>	
+		<div id="newsletter">
+			<h2><strong>Newsletter</strong></h2>
+			
+			<input placeholder="Imię" style="left:-2px;">	
+			<input placeholder="E-mail" style="left:-2px;" required type="email" >
+			<input type="submit"  value="Zapisz się"  >
+		</div>
+	</div>
+	<div id="right">		
+			<img style="width:100%;height:300px;" src="slider/mapa.jpg" alt="filmy" >
+			<h3>Mapa odsyłaczy</h3>
+			<p>Mapa odsyłaczy jest to obszar na zdjęciu, na którzy możemy kliknąć i przeniesie nas na jakąś stronę. 
+			Aby stworzyć mapę, którą będziemy mogli użyć wieloktornie potrzebujemy kontenerowego znacznika <span class="formularze" >map</span> z atrybutem <span class="formularze" >name</span>, który tak samo wpisujemy w atrybutach zdjęcia jako <span class="formularze" >usemap</span>.
+			W środku map, używamy samodzielnych znaczników <span class="formularze" >area</span>, tworzących obszar do kliknięcia.
+			Atrybutami area są: <span class="formularze" >href="..."</span> służące do określenia celu, <span class="formularze" >shape="..."</span> określa kształt oraz <span class="formularze" >coords="..."</span> są to współrzędne hiperłącza, także wymagany jest atrybut <span class="formularze" >alt="..."</span>.<br>
+			W przypadku kółka (<span class="formularze" >circle</span>) jest to kolejno współrzędna X, Y oraz promień, wszystko oddzielamy przecinkami.<br>
+			W przypadku prostokąta (<span class="formularze" >rect</span>) dajemy współrzędne dolnego lewego rogu oraz górnego prawego.<br>
+			Inne wielkąty (<span class="formularze" >poly</span>) określaby za pomocą wierzchołków.<br><Br>
+			<!--W tym przkładzie są dwa okrągłe odsyłacze znajdujące się w okolicy oczu. Kliknięcie w lewe oko spowoduje przeniesienie na stronę walidatora CSS, natomiast w prawę na stronę walidatora HTML.
+			Dostępne kształty to prostokąt (rest), koło (circle), oraz wielokąt (poly).
+			name (asd) w znaczniku map musi być taki sam jak w zdjęciu, które dodajemy.
+			Kod mapy odsyłaczy użyty w tym przypadku:</p>
+		<div sstyle="margin:0;padding:0;text-align:left; position:relative; left:-220px;">
+			
+				&#60;map name="asd"&#62;
+					&#60;area href="http://validator.w3.org/" shape="circle" coords="280,120,20"/&#62;
+					&#60;area href="https://jigsaw.w3.org/css-validator/" shape="circle" coords="430,115,20"/&#62;
+				&#60;/map&#62;
+			
+		</div>-->
+			<div>
+				<img usemap="#asd" style="width:100%;" src="http://www.bloblo.pl/image/322917/oryginal/zdj%C4%99cia-kobiet-11.jpg" alt="trygyrs" />
+			</div>
+			<map name="asd">
+				<area href="http://validator.w3.org/" shape="circle" coords="280,120,20" alt="ASD">
+				<area href="https://jigsaw.w3.org/css-validator/" shape="circle" coords="430,115,20" alt="ASD">
+			</map>
+	</div>
+</div>
+<footer>
+	<p>Wszystkie prawa zastrzeżone</p>
+	<p>Projekt i wdrożenie Kornel Miszczak</p>
+</footer>
+</body>
+</HTML>

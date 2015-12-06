@@ -1,0 +1,64 @@
+#menu > li > a{
+		display:block;
+		width:210px;
+		height:40px;
+		background-color:rgb(252,239,205);
+		color:rgb(109,70,39);
+		text-align:center;
+		margin-top:15px;
+		margin-bottom:15px;		
+		font-size:25px;
+		border-radius:30px;
+		font-variant:small-caps;
+		text-align:center;
+		text-decoration:none;
+		
+	}
+#menu > li > a:hover{
+	text-decoration:underline;
+}	
+	#menu > ul > a{
+		background-color:rgb(109,70,39);
+		width:230px;
+		display:block;
+		
+	}
+	
+	#newsletter > input{
+		display:block;
+		width:210px;
+		height:40px;
+		background-color:rgb(252,239,205);
+		color:rgb(109,70,39);
+		text-align:center;
+		margin-top:15px;
+		margin-bottom:15px;
+		font-size:30px;
+		border-radius:30px;
+		font-variant:small-caps;
+		text-align:center;
+		position:relative;
+		
+	}
+	#menu, #newsletter{
+		display:block;
+		width:210px;		
+		border-radius:30px;
+		padding:1px 5px 1px 5px;		
+		background-color:rgb(109,70,39);
+		margin:10px 0px;
+	}
+	#newsletter > h2{
+		color:rgb(252,239,205);
+		text-align:center;
+		width:210px;
+		font-size:35px;
+		text-decoration:underline;
+		margin-top:8px;
+		font-variant:small-caps;
+	}
+	
+	.formularze{
+		color:rgb(252,239,205);
+	
+	}
