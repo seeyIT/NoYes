@@ -1,0 +1,32 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+    <title>a</title>
+<meta charset="utf-8"/>
+
+
+    <script>
+        window.addEventListener("load", start, 0);
+        function start()
+        {
+            
+            document.getElementById("plus").addEventListener("click", function () {
+                var firstNumber = document.getElementById("first").value;
+                var secondNumber = document.getElementById("second").value; alert(parseFloat(firstNumber) + parseFloat(secondNumber))
+            }, 0);
+            document.getElementById("minus").addEventListener("click", function () {
+                var firstNumber = document.getElementById("first").value;
+                var secondNumber = document.getElementById("second").value; alert(parseFloat(firstNumber) - parseFloat(secondNumber))
+            }, 0);
+
+            
+        }
+    </script>
+</head>
+<body>
+    <input id="first" />
+    <button id="plus" >+</button>
+    <button id="minus">-</button>
+    <input id="second"  />
+</body>
+</html>

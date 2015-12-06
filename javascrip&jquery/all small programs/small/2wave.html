@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title></title>
+<script>
+function init(){
+    var text = prompt();
+    var length = text.length;
+    
+    var field = document.getElementById("in"); 
+    var iterator = 0;
+    var size = true;
+
+    for(var i =0;i<length;i++)
+    {
+        if (size)
+        {
+            var newText = "<span style='font-size = 10'>"+text[i]+"</span>";
+                     
+            field.innerHTML += newText;
+            iterator++;
+            if (iterator > 3)
+            {
+                size = !size;
+                iterator = 0;
+            }
+
+        }
+        else
+        {
+            var newText = "<span style='font-size: 50'>" + text[i] + "</span>";
+
+            field.innerHTML += newText;
+
+            iterator++;
+            if (iterator > 3)
+            {
+                size = !size;
+                iterator = 0;
+            }
+
+        }
+    }
+
+}
+</script>
+</head>
+<body onload="init()">
+    <div id="in"></div>
+</body>
+</html>

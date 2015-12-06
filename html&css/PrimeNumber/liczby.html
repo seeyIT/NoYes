@@ -1,0 +1,172 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>Atomy Świata Matematyki</title>
+<link rel="stylesheet" type="text/css" href="css.css">
+<meta charset="utf-8" />
+
+</head>
+<body><span id="top"></span>
+	<div style="margin-top:10px; background-color: rgba(255, 255, 255, 0.74);" id="glowny">
+		<header>
+			<img style="width:100%;" src="zdjecia/tytul.png" alt="tytuł"`/>
+		</header>
+		<div id="menu">
+			<ul id="menu2">
+				<li><a style="background-color:rgb(0, 81, 255);" href="liczby.html">Liczby Pierwsze</a></li>
+				<li><a href="riemann.html">Hipoteza Riemanna</a></li>
+				<li><a href="cryptography.html">Kryptografia</a></li>
+				<li><a href="rozszerzenie.html">Rozszerzenie</a></li>				
+			</ul>
+		</div>
+		<div id="tekst">
+		
+		<br>
+		<p style="text-align:center;">
+				<strong>Liczby naturalne można podzielić na pierwsze oraz złożone.</strong></p><p><br/>
+		Liczby pierwsze są to takie liczby naturalne, która mają dokładnie dwa dzielniki: jeden oraz samą siebie. 
+		Przykładowe liczby pierwsze to: 2, 3, 11, 19, 101. 
+		Nazywane są także atomami świata matematyki.<br><br/>
+		Liczby złożone to takie, które mają przynajmniej trzy dzielniki. Można je zapisać za pomocą iloczynu liczb pierwszych. 
+		Przykładowe liczby złożone to: 4, 6, 18, 102.<br><br>
+		Zero oraz jedynka nie należą ani do liczb pierwszych, ani złożonych.
+		Zero posiada nieskończenie wiele dzielników, 
+		natomiast jeżeli jedynka byłaby liczbą pierwszą to nie można było by jednoznacznie rozłożyć danej liczby.<br>
+		</p><br>
+		<div style="text-align:center;"><img style="width:45%; margin:auto;" src="zdjecia/zeroijeden.png" alt="zero i jeden"/></div>
+			<br><h2 class="naglp">Wzory związane z liczbami pierwszymi</h2><br>
+		<p>
+		Wyznaczyć wzór liczb pierwszych próbowano od dawna. 
+		Niestety nadal go nie znamy, lecz wyznaczono kilka wzorów dający wynik w postaci liczby pierwszej.
+		<br><br></p><div style="text-align:center;"><img style="width:35%;" src="zdjecia/wzor1.png" alt="wzor"/><br><br></div>
+		<p>
+		f(1) = 5 - liczba pierwsza,<br>
+		f(2) = 17 - liczba pierwsza,<br>
+		f(3) = 257 - liczba pierwsza,<br>
+		f(4) = 65537 - liczba pierwsza,<br>
+		f(5) = 4294967297 - liczba złożona, jej dzielniki to 641 i 6700417.<br><br>
+		</p>
+<div style="text-align:center;"><img style="width:50%;" src="zdjecia/wzor2.png" alt="wzor2"/></div><p>		<br>
+		f(1) = 1523 - liczba pierwsza,<br>
+		f(2) = 1447 - liczba pierwsza,<br>
+		f(3) = 1373 - liczba pierwsza,<br>
+		f(4) = 1301 - liczba pierwsza,<br>
+		f(5) = 1231 - liczba pierwsza,<br>
+		f(79) = 1601 - liczba pierwsza,<br>
+		f(80) = 1681 - liczba złożona, jest to kwadrat liczby 41.<br><br>
+		Dla n mniejszego od 79 wartości to liczby pierwsze, jednak dla n równemu 80 wynikiem jest liczba złożona.
+		<br><br>
+		</p>
+		<div style="text-align:center;"><img style="width:40%;" src="zdjecia/wzor3.png" alt="wzor3" /></div><p>
+		
+		f(1) = 41 - liczba pierwsza,<br>
+		f(2) = 43 - liczba pierwsza,<br>
+		f(3) = 47 - liczba pierwsza,<br>
+		f(4) = 53 - liczba pierwsza,<br>
+		f(5) = 61 - liczba pierwsza,<br>
+		f(40 = 1601 - liczba pierwsza,<br>
+		f(41) = 1681 - liczba złożona, jest to kwadrat liczby 41. <br><br>
+		Podobnie jak w przykładzie powyżej wzór sprawdza się tylko dla n w pewnym zakresie. Dla n równemu 41 wynikiem jest liczba złożona.
+		<br><br>
+		</p>	
+		<h3 class="naglp">Postulat Bertranda - Metoda Czebyszewa</h3><br>
+		<p>
+			Postulat Bertranda mówi, że jeżeli weźmiemy naturalną liczbę n większą od 1 oraz liczbę dwa rady większą od niej 2n, to w tym przedziale znajdzie się co najmniej jedna liczba pierwsza.
+			<br>Czebyszew zauważył, że jeżeli n jest większe od stu, to zamiast 2n można użyć 1,2n.<br>
+		</p>
+		<br><div style="text-align:center;"><img style="width:60%;" src="zdjecia/postulat.png" alt="Postulat"/></div>
+		<br><p>Pomaga to w szukaniu nowych dużych liczb, ponieważ wiemy, że w danym przedziale musi wystąpić przynajmniej jedna liczba pierwsza.
+			 
+		
+		</p><br>
+		<h3 class="naglp">Sito Eratostenesa</h3><br>
+		<div style="text-align:center;"><p>Aby wyznaczyć liczby pierwsze z danego przedziału używamy Sito Eratostenesa.</p></div><br>
+		<div>
+			<div style="float:left; width:30%; ">
+			<p>Sposób działania sita:</p>
+				<ul style="list-style:none">
+					<li><strong>1)</strong> Wypisujemy wszystkie liczby od 2 do N, oraz obliczamy pierwiastek z N, tu P.</li>
+					<li><strong>2)</strong> Dwa jest pierwszą napotkaną liczbą, więc jest ona pierwsza.</li>
+					<li><strong>3)</strong> Wykreślamy wszystkie wielokrotności. Jeżeli następna cyfra nie jest większa od P to przechodzimy do niej.</li>
+					<li><strong>4)</strong> Jest to liczba pierwsza. </li>
+					<li><strong>5)</strong> Powtarzamy krok 3 oraz 4 do momentu natrafienia na P. </li>					
+					<li><strong>6)</strong> Pozostałe liczby są pierwszymi. </li>					
+				</ul>
+				
+			</div>
+			
+				<img style=" width:68%;" src="zdjecia/sito.gif" alt="Sito Eratostenesa"/>
+		</div>	
+		<br>
+		<h2 class="naglp" style="clear:both;">Spirala Ulama</h2><br>
+				
+					<div style="float:left; width:30%;">
+						<p>
+							Stanisław Ulam, wybitny polski matematyk na pewnym wykładzie zaczął wypisywać po kolei liczby tworząc kwadratową spiralę. 
+							<br>Po czym zaznaczył tylko liczby pierwsze. <br>Zauważył, że tworzą one linie proste. 
+							Pokazuje to, że rozmieszczeniu liczb pierwszych musi towarzyszyć pewna tajemnicza prawidłowość, której do tej pory nie udało się odkryć.
+						</p>
+					</div>
+					
+					<img  style="width:68%; float:right; " src="zdjecia/spirala.gif" alt="asd" />
+					<div style="float:left;"><br>
+						<p>
+												
+							Oto powiększona spirala ulama na której można zauważyć, że liczby pierwsze tworzą linie proste.
+							Czerwona kropka jest środkiem spirali.<br><br>
+						</p><img style="width:100%; height:100%;" src="zdjecia/duzaspiralaulama.png" alt="Powiększona spirala Ulama"/>
+						<p style="margin:3px 0;">
+						Okrągła spirala Ulama, na której także widać, że rozmieszczenie liczb pierwszych to nie przypadek.
+						</p>
+						
+					</div>
+					<img  style=" width:100%; height:100%;"  src="zdjecia/okrągłaspirala.png" alt="asd" />
+					
+			<br><br>	
+		<h2 class="naglp">Ciąg Mersenna</h2><br>
+		<p>
+		Mersenn podał ciąg liczb, nazwany ciągiem Mersenna. 
+		Liczby tego ciągu wyznacza się według wzoru: 
+		<div style="text-align:center;"><img src="zdjecia/liczbapierwszemersena.png" alt="Wzór na liczby Mersenna"></div><br>
+		2<sup>1</sup> - 1 = 1,<br>
+		2<sup>2</sup> - 1 = <span style="border-bottom:black solid 2px;">3</span>,<br>
+		2<sup>3</sup> - 1 = <span style="border-bottom:black solid 2px;">7</span>, <br>
+		2<sup>4</sup> - 1 = 15, <br>
+		2<sup>5</sup> - 1 = <span style="border-bottom:black solid 2px;">31</span>,<br>
+		2<sup>6</sup> - 1 = <span style="border-bottom:black solid 2px;">63</span>,<br>		
+		2<sup>11</sup> - 1 = 2047,<br>
+		2<sup>12</sup> - 1 = 4095,<br>
+		2<sup>13</sup> - 1 = <span style="border-bottom:black solid 2px;">8191</span>,<br>
+		2<sup>20</sup> - 1 = 1048575.<br><br>
+		W ciągu tym występują liczby pierwsze (w przykładzie podkreślone), są nazwane liczbami pierwszymi Mersenna. <br>
+		Właśnie dzięki tym liczbom wyznaczono największą liczbę pierwsza. 
+		Jest to czterdziesta ósma liczba pierwsza równa 2<sup>57885161</sup>-1. Składa się ona z 17 425 170 cyfr. 
+		Tabela poniżej przedstawia wszystkie znane liczby pierwsze Mersenna.
+		
+		
+		</p>
+		<br>
+		<div style="text-align:center;"><img style="width:80%;" src="zdjecia/liczbypierwszemersena.png" alt="Liczby pierwsze Mersenna"/></div>
+		<p>
+			Liczby pierwsze znajdujące się w ciągu Mersenna są także związane z liczbami doskonałymi.
+		</p><br>
+		<h2 class="naglp">Ciekawe liczby pierwsze</h2><br>	
+				
+		<ul style="margin-left:23px;">
+			<li>2 jest jedyną liczbą pierwszą parzystą,</li>
+			<li>3, 5, 7 są jednymi kolejnymi trzema liczbami nieparzystymi, które są jednocześnie pierwsze,</li>
+			<li>liczba 11 111 111 111 111 111 111 111 składa się z dwudziestu trzech jedynek jest pierwsza,</li>
+			<li>73939133 jest liczbą pierwszą, tak jak wszystkie liczby utworzone po obcięciu prawej cyfry: 7393913, 739391, 73939, 7393, 739, 73, 7,</li>
+			<a href="#top"><img id="strzalka" src="zdjecia/strzalka.png" alt="Strzałka"/></a>
+			<li>istnieją liczby pierwsze złożone z kolejnych cyfr np: 23, 67, 23456789, 1234567891234567891234567891,</li>
+			<li>liczba pierwsza: 31 415 926 535 897 932 384 626 433 832 795 028 841 składa się z trzydziestu ośmiu cyfr, które są rozwinięciem dziesiętnym liczby PI.</li>
+			
+		
+		</ul>
+		<br>
+		</div>
+		<footer>Kornel Miszczak - Technikum Łączności nr 14 w Krakowie
+		</footer>
+	</div>
+</body>
+</html>

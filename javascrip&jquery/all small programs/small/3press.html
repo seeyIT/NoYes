@@ -1,0 +1,76 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title></title>
+        
+        <script>
+            
+            window.addEventListener("load", start, false)
+            function start() {
+                var text = document.createElement("div");
+                text.innerHTML = "asd";
+                text.style.position = "absolute";
+                text.style.left = 100;
+                text.style.top = 200;
+
+                document.body.appendChild(text);
+                var top = parseInt(text.style.top);
+                var left = parseInt(text.style.left);
+
+                move = setInterval(function () { }, 1);
+                i = 0;
+
+                window.addEventListener("keypress", press, false);
+                function press(e) {
+                    i = 0;
+                    clearInterval(move);
+
+                    if (e.keyCode == 100) {
+                        move = setInterval(function () {
+                            left += 2;
+                            text.style.left = left;
+                            i++;
+                            console.log(i)
+                            if (i >= 100)
+                                clearInterval(move);
+                        }, 1)
+                        
+
+                    }
+                    else if (e.keyCode == 115) {
+                        move = setInterval(function () {
+                            top += 2;
+                            text.style.top = top;
+                            i++;
+                            if (i >= 100)
+                                clearInterval(move);
+                        }, 1)
+                    }
+                    else if (e.keyCode == 119) {
+                        move = setInterval(function () {
+                            top -= 2;
+                            text.style.top = top;
+                            i++;
+                            if (i >= 100)
+                                clearInterval(move);
+                        }, 1)
+                    }
+                    else if (e.keyCode == 97) {
+                        move = setInterval(function () {
+                            left -= 2;
+                            text.style.left = left;
+                            i++;
+                            if (i >= 100)
+                                clearInterval(move);
+                        }, 1)
+                    }
+
+                }
+
+
+            }
+        </script>
+    </head>
+    <body>        
+   </body>
+</html>

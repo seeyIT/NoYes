@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>calc</title>
+    <style>
+        #wynik{
+            width:200px;
+        }
+
+        tr {
+            width:200px;
+        }
+        td {
+            width:50px;
+            height:50px;
+            border:dotted 1px black;
+        }
+
+    </style>
+    <script>
+        function init() {
+            var value = document.getElementById("wynik");
+            var number = true;
+
+            document.getElementById("g0").addEventListener("click", zero, false);
+          
+            function zero() {
+                var button = document.getElementById("g0").innerHTML;
+               
+                if (value.innerHTML === "0")
+                {
+                    value.innerHTML = button;
+                }
+                else
+                {
+                    value.innerHTML = value.innerHTML + button;
+                }
+                number = true;
+            }
+            document.getElementById("g1").addEventListener("click", one, false);
+
+            function one() {
+                var button = document.getElementById("g1").innerHTML;
+
+                if (value.innerHTML === "0") {
+                    value.innerHTML = button;
+                }
+                else {
+                    value.innerHTML = value.innerHTML + button;
+                }
+                number = true;
+            }
+
+            document.getElementById("g2").addEventListener("click", two, false);
+
+            function two() {
+                var button = document.getElementById("g2").innerHTML;
+
+                if (value.innerHTML === "0") {
+                    value.innerHTML = button;
+                }
+                else {
+                    value.innerHTML = value.innerHTML + button;
+                }
+
+                number = true;
+            }
+
+            document.getElementById("g3").addEventListener("click", three, false);
+
+            function three() {
+                var button = document.getElementById("g3").innerHTML;
+
+                if (value.innerHTML === "0") {
+                    value.innerHTML = button;
+                }
+                else {
+                    value.innerHTML = value.innerHTML + button;
+                }
+
+                number = true;
+            }
+
+            document.getElementById("g4").addEventListener("click", four, false);
+
+            function four() {
+                var button = document.getElementById("g4").innerHTML;
+
+                if (value.innerHTML === "0") {
+                    value.innerHTML = button;
+                }
+                else {
+                    value.innerHTML = value.innerHTML + button;
+                }
+                number = true;
+            }
+
+            document.getElementById("g5").addEventListener("click", five, false);
+
+            function five() {
+                var button = document.getElementById("g5").innerHTML;
+
+                if (value.innerHTML === "0") {
+                    value.innerHTML = button;
+                }
+                else {
+                    value.innerHTML = value.innerHTML + button;
+                }
+                number = true;
+            }
+
+            document.getElementById("g6").addEventListener("click", six, false);
+
+            function six() {
+                var button = document.getElementById("g6").innerHTML;
+
+                if (value.innerHTML === "0") {
+                    value.innerHTML = button;
+                }
+                else {
+                    value.innerHTML = value.innerHTML + button;
+                }
+                number = true;
+            }
+
+            document.getElementById("g7").addEventListener("click", seven, false);
+
+            function seven() {
+                var button = document.getElementById("g7").innerHTML;
+
+                if (value.innerHTML === "0") {
+                    value.innerHTML = button;
+                }
+                else {
+                    value.innerHTML = value.innerHTML + button;
+                }
+                number = true;
+            }
+
+            document.getElementById("g8").addEventListener("click", eigth, false);
+
+            function eigth() {
+                var button = document.getElementById("g8").innerHTML;
+
+                if (value.innerHTML === "0") {
+                    value.innerHTML = button;
+                }
+                else {
+                    value.innerHTML = value.innerHTML + button;
+                }
+                number = true;
+            }
+
+            document.getElementById("g9").addEventListener("click", nine, false);
+
+            function nine() {
+                var button = document.getElementById("g9").innerHTML;
+
+                if (value.innerHTML === "0") {
+                    value.innerHTML = button;
+                }
+                else {
+                    value.innerHTML = value.innerHTML + button;
+                }
+                number = true;
+            }
+
+            document.getElementById("g.").addEventListener("click", dot, false);
+
+            function dot() {
+                var button = document.getElementById("g.").innerHTML;
+
+                if (number) {
+                    value.innerHTML = value.innerHTML + button;
+                    number = false;
+                }
+                else {
+                    value.innerHTML = value.innerHTML.substring(0, value.innerHTML.length - 1) + button;
+
+                }
+            }
+
+            document.getElementById("g/").addEventListener("click", divide, false);
+
+            function divide() {
+                var button = document.getElementById("g/").innerHTML;
+
+                if (number) {
+                    value.innerHTML = value.innerHTML + button;
+                    number = false;
+                }
+                else {
+                   value.innerHTML = value.innerHTML.substring(0, value.innerHTML.length - 1) + button;
+                   
+                }
+            }
+
+            document.getElementById("g*").addEventListener("click", multiply, false);
+
+            function multiply() {
+                var button = document.getElementById("g*").innerHTML;
+
+                if (number) {
+                    value.innerHTML = value.innerHTML + button;
+                    number = false;
+                }
+                else {
+                    value.innerHTML = value.innerHTML.substring(0, value.innerHTML.length - 1) + button;
+
+                }
+            }
+
+            document.getElementById("g+").addEventListener("click", add, false);
+
+            function add() {
+                var button = document.getElementById("g+").innerHTML;
+
+                if (number) {
+                    value.innerHTML = value.innerHTML + button;
+                    number = false;
+                }
+                else {
+                    value.innerHTML = value.innerHTML.substring(0, value.innerHTML.length - 1) + button;
+
+                }
+            }
+
+            document.getElementById("g-").addEventListener("click", substract, false);
+
+            function substract() {
+                var button = document.getElementById("g-").innerHTML;
+
+                if (number) {
+                    value.innerHTML = value.innerHTML + button;
+                    number = false;
+                }
+                else {
+                    value.innerHTML = value.innerHTML.substring(0, value.innerHTML.length - 1) + button;
+
+                }
+            }
+
+            document.getElementById("g=").addEventListener("click", equal, false);
+
+            function equal() {
+                if(number)
+                {
+                    value.innerHTML = eval(value.innerHTML);
+                    if (value.innerHTML == "Infinity")
+                    {
+                        value.innerHTML = "ŁO PANIE!";
+                    }
+                }
+                else
+                {
+                    value.innerHTML = value.innerHTML.substring(0, value.innerHTML.length - 1);
+                    number = true;
+                }
+               
+            }
+        }
+
+       
+    </script>
+</head>
+<body onload="init()">
+    <div>
+        
+        <table>
+            <tr>
+                <td colspan="4" id="wynik">0</td>
+            </tr>
+            <tr>
+                <td colspan="4" id="g=">=</td>
+            </tr>
+            <tr>
+                <td id="g7">7</td>
+                <td id="g8">8</td>
+                <td id="g9">9</td>
+                <td id="g/">/</td>
+            </tr>
+            <tr>
+                <td id="g4">4</td>
+                <td id="g5">5</td>
+                <td id="g6">6</td>
+                <td id="g*">*</td>
+            </tr>
+            <tr>
+                <td id="g1">1</td>
+                <td id="g2">2</td>
+                <td id="g3">3</td>
+                <td id="g-">-</td>
+            </tr>
+            <tr>
+                <td colspan="2" id="g0">0</td>
+                <td id="g.">.</td>
+                <td id="g+">+</td>
+            </tr>
+
+
+        </table>
+     </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>sprawdzian</title>
+        <script>
+            function init() {
+                
+                //var id1 = document.getElementById("1");
+                /*var id2 = document.getElementById("2");
+                var id3 = document.getElementById("3");
+                var id4 = document.getElementById("4");
+                var id5 = document.getElementById("5");
+                var id6 = document.getElementById("6");
+                var id7 = document.getElementById("7");
+                var id8 = document.getElementById("8");
+                */
+
+                var boxy = document.getElementsByClassName("box");
+                for(var i =0;i<8;i++)
+                {
+                    boxy[i].addEventListener("click", select, false);
+                    
+                }
+                function select() {
+                    this.style.background = "blue";                    
+                    color();
+                    
+                }
+
+                function color() {
+                    for (var i = 0; i < 8; i++) {
+                        if (boxy[i].style.background == "blue")
+                        {
+                            
+                            changecolor(i);
+                            
+                        }
+                    }
+
+                }
+                function changecolor(asd) {
+                    check();
+                    setTimeout(function () { boxy[asd].style.background = "red"; }, 5000)
+                    
+                }
+                var aaaa =0;
+                function check() {
+                    aaaa = 0;
+                    for (var i = 0; i < 8; i++) {
+                        if(boxy[i].style.background == "blue") {
+
+                            aaaa++;
+                        }
+
+                    }
+                    if(aaaa==8)
+                    {
+                        qwwww();
+                        
+                        
+                    }
+                }
+                function qwwww() {
+                    alert("KOniec");
+                }
+                /*function spawn() {
+                    if (interator < 5) {
+                    var wysokosc = Math.random();
+                    var szerokosc = Math.random();
+                    var oknoszerokosc = window.innerWidth - 100;
+                    var oknowysokosc = window.innerHeight - 100;
+
+                    d.style.position = "absolute";
+                    d.style.left = szerokosc * oknoszerokosc;
+                    d.style.top = wysokosc * oknowysokosc;
+                    var map = document.getElementById("map");
+                    map.appendChild(d);
+                    interator++;
+                    setTimeout(spawn, 0);
+                    
+                    }
+
+                }
+                */
+
+                    
+
+                    
+                   
+
+                
+               /* function animate() {
+                    if (interator < 20) {
+
+                    
+                        var target = document.getElementById("Kwadrat")
+                        var wysokosc = target.style.top;
+                        var wyss = parseInt(wysokosc)
+                        var newwyss = wyss - 1;
+                        target.style.top = newwyss;
+                        interator++;
+                        setTimeout(animate, 50);
+                    }
+                    
+                }*/
+                
+            }
+            //onmousemove="mouseMove()"
+        </script>
+    </head>
+    <body onload="init()" >
+    <div id="map" >
+        <div id="1" class="box" style="background:red; width:10px; height:10px; position:absolute; left:100px;top:100px;"></div>
+        <div id="2" class="box" style="background:red; width:10px; height:10px; position:absolute; left:500px;top:20px;"></div>
+        <div id="3" class="box" style="background:red; width:10px; height:10px; position:absolute; left:428px;top:568px;"></div>
+        <div id="4" class="box" style="background:red; width:10px; height:10px; position:absolute; left:111px;top:258px;"></div>
+        <div id="5" class="box" style="background:red; width:10px; height:10px; position:absolute; left:50px;top:50px;"></div>
+        <div id="6" class="box" style="background:red; width:10px; height:10px; position:absolute; left:425px;top:24px;"></div>
+        <div id="7" class="box" style="background:red; width:10px; height:10px; position:absolute; left:105px;top:542px;"></div>
+        <div id="8" class="box" style="background:red; width:10px; height:10px; position:absolute; left:75px;top:250px;"></div>
+    </div>
+</body>
+</html>

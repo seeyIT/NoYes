@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+        
+        <title>cookiesssy</title>
+        <meta charset="utf-8"/>		
+		<script>
+            window.addEventListener("load", start, 0);
+
+            function start()
+            {
+                var date = new Date();
+                var time = date.toLocaleString();
+                //time = time.split(",")[1];
+               // var time + 654321;
+                //console.log(timeExpt)
+                if(document.cookie.indexOf("name")<0)
+                {
+                    var name = window.prompt("imie");
+                    document.cookie = "name=" + name;
+                    document.cookie = "lastVisit=" + time;
+                    console.log(document.cookie)
+                    document.getElementById("heeeeeeloword").innerHTML = "hello" + name;
+                }
+                else
+                {
+                    var tabCookiess = document.cookie.split(";");                   
+                    var amountCookies = tabCookiess.length;
+
+                    for (var i = 0 ; i < amountCookies; i++)
+                    {
+                        tabCookiess[i] = tabCookiess[i].trim();
+                        if (tabCookiess[i].split("=")[0] == "name")
+                        {
+                            var name = tabCookiess[i].split("=")[1];
+                            console.log(name)
+                            document.cookie = "name=" + name;
+                        }
+                        if (tabCookiess[i].split("=")[0] == "lastVisit")
+                        {
+                            var lastVisit = tabCookiess[i].split("=")[1];
+                            document.cookie = "lastVisit" + lastVisit;
+                            console.log(tabCookiess[i].split("=")[1])
+                        }
+                      }
+                    }
+                    document.cookie = "lastVisit=" + time;
+                    document.getElementById("heeeeeeloword").innerHTML = "hello" + name+" ostatnio " + lastVisit;
+                    
+                }
+          
+                
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*function init() {
+                    var d = new Date;
+                    var time = d.toLocaleTimeString();
+                    d.setTime(d.getTime() + 1000 * 60 * 60 * 2);
+                if (document.cookie.indexOf("name") < 0) {
+                    console.log(document.cookie.indexOf("nameLastVisit"));
+                    var name = window.prompt("Podaj imie");
+                    document.cookie = "name=" + name + "; lastVisit=" + time + ";expires=" + d.toUTCString();
+                    console.log(document.cookie);
+                }
+                else {
+                    var cookies = document.cookie.split("; ");
+                    for (var i = 0; i < cookies.length; i++) {
+                        if (cookies[i].indexOf("name") >= 0) {
+                            var name = cookies[i].split("=")[1];
+                        }
+
+                        if (cookies[i].indexOf("lastVisit") >= 0) {
+                            var lastVisit = cookies[i].split("=")[1];
+                        }
+                    }
+
+                    document.getElementById("content").innerHTML = "Witaj " + name + ", ostatnio odwiedziłeś nas o godzinie " + lastVisit;
+                    document.cookie = "lastVisit=" + time + ";expires=" + d.toUTCString();
+                }
+			}*/
+		</script>
+	</head>
+	<body >
+		<div id="heeeeeeloword"></div>
+	</body>
+</html>

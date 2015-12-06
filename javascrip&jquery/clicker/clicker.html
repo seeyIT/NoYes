@@ -1,0 +1,85 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Shooter</title>
+        <script>
+             function init() {
+                
+
+                var time = 2000;
+                accelerate(time);
+                var sideLength = document.getElementById('cel').width
+                
+                var points = document.createElement("span");
+                points.innerHTML = 0;
+                 
+                function accelerate(time){
+                    interval = setInterval(spawn, time);
+                }
+                
+                
+                function spawn() {
+
+                    image = document.getElementById("cel");
+                    image.style.position = "absolute";
+                    image.style.display = "block";
+                    image.style.left = Math.random() * (window.innerWidth-image.width) ;
+                    image.style.top= Math.random() * (window.innerHeight-image.height);
+                   
+                    pages = document.getElementById("page").appendChild(points);
+                    
+                }
+                function kill()
+                {
+                    var cel = document.getElementById("cel");
+                    cel.style.display = "none";
+                    
+
+                    document.getElementById('cur').style.display = "block";
+
+                    clearInterval(interval);
+                    time -= 100;
+                    accelerate(time);
+                    
+                    var value = parseInt(points.innerHTML) + 10;
+                    points.innerHTML = value;
+                }
+                document.getElementById('cur').addEventListener("click", hit, false);
+                function hit() {
+                    var cel = document.getElementById("cel");
+                    var cur = document.getElementById("cur");
+                    var cell = parseInt(cel.style.left);
+                    var curr = parseInt(cur.style.left);
+                    var celWysokosc = parseInt(cel.style.top);
+                    var currWysokosc = parseInt(cur.style.top);
+                    
+                    if (curr > cell && curr < cell + sideLength)
+                        if (currWysokosc > celWysokosc && currWysokosc < celWysokosc + sideLength)
+                            kill();
+                }
+                //tail
+            }
+            function mouseMove() {
+
+               
+                document.getElementById('cur').style.position = "absolute";
+                document.getElementById('cur').style.left = event.clientX - 25;
+                document.getElementById('cur').style.top = event.clientY - 25;
+                
+            }
+            
+           
+            
+
+
+
+
+            
+        </script>
+    </head>
+    <body onload="init()" onmousemove="mouseMove()">
+    <div id="page">points: </div>
+        <img src="Farquaad.jpg" id="cel" alt="" />
+        <img src="Cookie.jpg" id="cur" alt="" />
+</body>
+</html>

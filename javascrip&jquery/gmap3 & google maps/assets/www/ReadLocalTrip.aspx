@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ReadLocalTrip.aspx.cs" Inherits="ReadLocalTrip" %>

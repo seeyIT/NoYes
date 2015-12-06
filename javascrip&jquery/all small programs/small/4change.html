@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+<head>
+<script>
+function init(){	
+	var input = document.getElementById("text");
+	var wholeText = "mi mialoby sie nie udac ?:P cieakwe czy da sie do przeczytac nie zagladajac w kod anie tego nie zwalniajac :)";
+	setInterval(change,1);
+	function change(){
+		
+		wholeText = wholeText.substr(1,wholeText.length-1)+wholeText.substring(0,1);
+		input.value=wholeText;
+		
+	}
+
+}
+</script>
+</head>
+<body onload="init()">
+<div>
+<input id="text" value=""></input>
+</div>
+</form>
+
+</body>
+</html>

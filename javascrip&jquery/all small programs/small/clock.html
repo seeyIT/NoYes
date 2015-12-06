@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html>
+<head>
+<script>
+function init(){
+	/*
+	/////////////
+	//*** ZADANIE 1
+	////////
+	var date = new Date();
+
+	var day =["nd","pon","wtore","sr","czwa","piatek","sobota"];
+	var dzien = day[date.getDay()];
+
+	var month=["sty","luty","marz","kwiec","maj","czer","lip","sierp","wrze","paz","list","gr"];
+	var miesiac = month[date.getMonth()];
+	var sekundy = date.getSeconds();
+	if(sekundy<10)
+	{
+			sekundy="0"+sekundy;
+	}
+	document.getElementById("in").innerHTML = dzien+"," + date.getDate() + miesiac+"<br>" + date.getFullYear() +"<br>"+ "godzina: "+date.getHours() +":"+ sekundy;
+*/
+	var date = new Date();
+	
+	var numbers = ["./c0.gif","./c1.gif","./c2.gif","./c3.gif","./c4.gif","./c5.gif","./c6.gif","./c7.gif","./c8.gif","./c9.gif"];
+	
+	var colon = ["./colon.gif"]
+
+	setInterval(czas,1);
+
+	function czas(){	
+	document.getElementById("in").innerHTML="";
+	var date = new Date();
+	var time = date.toLocaleTimeString();
+	var godzina1 = document.createElement("img");
+	godzina1.src= numbers[time[0]];	
+	document.getElementById("in").appendChild(godzina1);
+
+	var godzina2 = document.createElement("img");
+	godzina2.src= numbers[time[1]];	
+	document.getElementById("in").appendChild(godzina2);
+
+	var godzina3 = document.createElement("img");
+	godzina3.src= colon[0];	
+	document.getElementById("in").appendChild(godzina3);
+
+	var godzina4 = document.createElement("img");
+	godzina4.src= numbers[time[3]];	
+	document.getElementById("in").appendChild(godzina4);
+
+	var godzina5 = document.createElement("img");
+	godzina5.src= numbers[time[4]];	
+	document.getElementById("in").appendChild(godzina5);
+
+	var godzina6 = document.createElement("img");
+	godzina6.src= colon[0];		
+	document.getElementById("in").appendChild(godzina6);
+
+	var godzina7 = document.createElement("img");
+	godzina7.src= numbers[time[6]];	
+	document.getElementById("in").appendChild(godzina7);
+
+	var godzina8 = document.createElement("img");
+	godzina8.src= numbers[time[7]];	
+	document.getElementById("in").appendChild(godzina8);
+	}
+
+}
+</script>
+</head>
+<body onload="init()">
+<div id="in"></div>
+</body>
+</html>

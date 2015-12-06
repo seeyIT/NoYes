@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+<script>
+function init(){
+
+	var loop=0;
+	var size= document.getElementById("sieze");
+
+	setInterval(rozmiarZmiana,100);
+	function rozmiarZmiana()
+	{
+		if(loop<10){
+		size.style.width = parseInt(size.width)+10+"px";
+		size.style.height = parseInt(size.height)+10+"px";
+		loop++;
+		}
+		else if(loop<20){
+		size.style.width = parseInt(size.width)-10+"px";
+		size.style.height = parseInt(size.height)-10+"px";
+		loop++;
+		}
+		else{
+			loop=0;
+		}
+		
+	}
+}
+</script>
+</head>
+<body onload="init()">
+
+<div><img id="sieze" src="http://matma-na6.prv.pl/grafika/figury/kwadrat.png"></div>
+
+</form>
+
+</body>
+</html>

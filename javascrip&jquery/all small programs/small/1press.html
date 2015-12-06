@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>16-11-2015</title>
+        
+        <script>          
+            window.addEventListener("load", start, false);
+            function start()
+            {
+                var head = document.createElement("div");
+                head.innerHTML = "asd";
+                head.style.position = "absolute";
+                head.style.left = 100;
+                head.style.top = 200;
+                
+                document.body.appendChild(head);
+
+                
+                window.addEventListener("keypress", press, false);
+                function press(e)
+                {
+                    var top = parseInt(head.style.top);
+                    var left = parseInt(head.style.left);
+
+                    if(e.keyCode==100)
+                    {
+                        left += 10;
+                        head.style.left = left;
+                    }
+                    if(e.keyCode==115)
+                    {
+                        top += 10;
+                        head.style.top = top;
+                    }
+                    if(e.keyCode==119)
+                    {
+                       
+                       top -= 10;
+                        head.style.top = top;
+                    }
+                    if(e.keyCode==97)
+                    {
+                        left -= 10;
+                        head.style.left = left;
+                    }
+                    
+                   
+                }
+            }
+            
+        </script>
+    </head>
+    <body>        
+   </body>
+</html>
