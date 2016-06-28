@@ -1,0 +1,393 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+}
+
+body {
+    overflow: hidden;
+    background-color: #000000;
+    font-family: monospace;
+}
+
+#start_screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#login_panel {
+    width: 300px;
+    height: auto;
+    padding: 25px 0;
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+#login_panel > input {
+    display: block;
+    box-sizing: content-box;
+    width: 250px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    outline: none;
+}
+
+#login_panel > input:last-child {
+    margin-bottom: 0;
+}
+
+.user_input {
+    background-color: #007f7f;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+}
+
+.user_button {
+    background-color: #00ffff;
+    border: 2px outset #00ffff;
+    color: #007f7f;
+    cursor: pointer;
+}
+
+.user_button:hover {
+    background-color: #007f7f;
+    border: 2px outset #00ffff;
+    color: #00ffff;
+}
+
+.user_button:active {
+    background-color: #004f4f;
+    border: 2px inset #00ffff;
+}
+
+::-webkit-input-placeholder { color: #00afaf }
+::-moz-placeholder { color: #00afaf }
+:-ms-input-placeholder { color: #00afaf }
+:-moz-placeholder { color: #00afaf }
+
+#dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+#dialog.hidden {
+    display: none;
+}
+
+#dialog > div {
+    max-width: 350px;
+    height: auto;
+    padding: 20px;
+    background-color: #007f7f;
+    border: 3px solid #00ffff;
+}
+
+#dialog_text {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+    font-size: 1.4em;
+}
+
+#dialog_buttons_bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+#dialog button {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 50px;
+    background-color: #00afaf;
+    border: 2px outset #00ffff;
+    outline: none;
+    cursor: pointer;
+}
+
+#dialog button:hover {
+    background-color: #007f7f;
+    border: 2px outset #00ffff;
+    color: #00ffff;
+}
+
+#dialog button:active {
+    background-color: #004f4f;
+    border: 2px inset #00ffff;
+}
+
+#dialog.information .type_information {
+    display: inline-block;
+}
+
+#dialog.information .type_question {
+    display: none;
+}
+
+#dialog.question .type_question {
+    display: inline-block;
+}
+
+#dialog.question .type_information {
+    display: none;
+}
+
+#tip {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    transition: opacity 1s;
+    z-index: 1000;
+}
+
+#tip.hidden {
+    opacity: 0;
+}
+
+#tip > div {
+    height: 50px;
+    line-height: 50px;
+    background: none;
+    text-align: center;
+    color: #ffffff;
+}
+
+#info_bar {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 40px);
+    height: 100px;
+    padding: 10px;
+    transition: right 0.5s linear;
+}
+
+.player_info {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+#info_bar_first, #info_bar_first > * {
+    float: left;
+}
+
+#info_bar_second, #info_bar_second > * {
+    float: right;
+}
+
+#info_bar_first > div {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 25px;
+    padding-left: 48px;
+    color: #007f7f;
+    font-size: 24px;
+}
+
+#info_bar_second > div {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 25px;
+    padding-left: 48px;
+    color: #007f7f;
+    font-size: 24px;
+}
+
+.info_bar_nickname {
+    background: url('../img/info-bar-nickname.png') no-repeat left center / 32px;
+}
+
+.info_bar_score {
+    background: url('../img/info-bar-score.png') no-repeat left center / 32px;
+}
+
+.info_bar_ranking {
+    background: url('../img/info-bar-ranking.png') no-repeat left center / 32px;
+}
+
+#side_panel {
+    position: fixed;
+    top: 200px;
+    right: 10px;
+    width: 250px;
+    height: 400px;
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0.5);
+    transition: right 0.5s linear;
+}
+
+#side_panel.hidden {
+    right: -270px;
+}
+
+#side_panel_toggle_button {
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    width: 20px;
+    height: 40px;
+    background-color: rgba(0, 255, 255, 0.25);
+    cursor: pointer;
+}
+
+#side_panel_toggle_button::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 40px;
+    background-image: url('../img/side-panel-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    transition: transform 0.5s linear 0.6s;
+}
+
+#side_panel_toggle_button.hidden::before {
+    transform: rotate(180deg);
+}
+
+#side_panel_bookmarks {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 30px;
+}
+
+.side_panel_bookmark {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(0, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.side_panel_bookmark.hidden {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(0, 255, 255, 0.25);
+}
+
+#side_panel_players_bookmark {
+    background-image: url('../img/side-panel-players.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+}
+
+#side_panel_ranking_bookmark {
+    background-image: url('../img/side-panel-ranking.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+}
+
+.side_panel.hidden {
+    display: none;
+}
+
+.side_panel_outer {
+    width: 100%;
+    height: auto;
+    border: 2px solid #00ffff;
+}
+
+.side_panel_outer > h1 {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    background-color: #00ffff;
+    text-align: center;
+    font-size: 16px;
+}
+
+.side_panel_playing_list {
+    list-style-type: none;
+}
+
+.side_panel_queue_list {
+    list-style-type: none;
+    height: 9999px;
+    max-height: 301px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.side_panel_queue_list::-webkit-scrollbar { display: none }
+
+.side_panel_ranking_list {
+    list-style-type: none;
+    height: 9999px;
+    max-height: 376px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.side_panel_ranking_list::-webkit-scrollbar { display: none }
+
+.player_item {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 1px solid #00ffff;
+    text-align: center;
+}
+
+.player_item > span {
+    display: inline-block;
+}
+
+.player_item > span:nth-child(1) { width: 20% }
+.player_item > span:nth-child(2) { width: 60% }
+.player_item > span:nth-child(3) { width: 20% }
+
+#help_box {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    max-width: 300px;
+    height: auto;
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+#help_box > div {
+    padding: 20px;
+    cursor: help;
+}
+
+#help_box.hidden > div {
+    display: none;
+}
+
+#help_box.hidden::before {
+    content: "?";
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
