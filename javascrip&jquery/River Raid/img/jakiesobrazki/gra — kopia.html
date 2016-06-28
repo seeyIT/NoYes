@@ -1,0 +1,214 @@
+﻿﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>gra</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script>
+        window.addEventListener("load", Start, false);
+        window.addEventListener("keypress", PressKey, false);
+        window.addEventListener("keyup", KeyUp, false);
+        document.addEventListener("click")
+        function Start()
+        {
+            playField = document.getElementById("PlayField");
+            tableWithBackground = [];
+            
+            scrollingSpeed = 30;
+            initiallySpeed = scrollingSpeed;
+            bulletSpeed = 40;
+            enableToShoot = true;
+
+            var img =new Image();
+            img.src = "Background.png";
+            img.style.position = "absolute";
+            img.style.top = 0;
+            img.style.left = 0;
+            img.style.width = 100;
+            img.style.height = 60;
+            tableWithBackground.push(img);
+            img.MoveDown(img);
+            playField.appendChild(img);
+
+            var img2 = new Image();
+            img2.src = "Background.png";
+            img2.style.position = "absolute";
+            img2.style.top = 200;
+            img2.style.left = 0;
+            img2.style.width = 100;
+            img2.style.height = 60;
+            tableWithBackground.push(img2);
+            img2.MoveDown(img2);
+            playField.appendChild(img2);
+            
+
+            var img25 = new Image();
+            img25.src = "Background.png";
+            img25.style.position = "absolute";
+            img25.style.top = 200;
+            img25.style.left = 200;
+            img25.style.width = 100;
+            img25.style.height = 60;
+            tableWithBackground.push(img25);
+            playField.appendChild(img25);
+
+            Player = new Image();
+            Player.src = "Background.png";
+            Player.style.position = "absolute";
+            Player.setAttribute("id", "Player");
+            Player.style.top = 400;
+            Player.style.left = 200;
+           
+            
+            playField.appendChild(Player);
+        }
+
+
+        function PressKey(e)
+        {
+            
+            if(e.which == 119)
+            {
+                if (scrollingSpeed > 10)
+                {
+                    scrollingSpeed -= 1;
+                }
+            }
+            else if (e.which == 115)
+            {
+                if (scrollingSpeed < 50) {
+                    scrollingSpeed += 1;
+                }
+            }
+            if (e.which == 100)
+            {
+                Player.style.left = parseInt(Player.style.left) + 3;
+                Player.src = "prawo.png";
+            }
+            else if (e.which == 97)
+            {
+                Player.style.left = parseInt(Player.style.left) - 3;
+                Player.src = "lewo.png";
+            }
+           
+            if (e.which == 32 && enableToShoot) {
+                console.log(tableWithBackground.length)
+                for (var i = 0; i < tableWithBackground.length; i++) {
+                    console.log(tableWithBackground[i]);
+                }
+
+
+                enableToShoot = false;
+                var shoot = new Image();
+                shoot.src = "shoot.png";
+                shoot.style.position = "absolute";
+                shoot.style.top = parseInt(Player.style.top) - 30;
+                shoot.style.left = parseInt(Player.style.left) + 50;
+                shoot.Shoot(shoot);
+                playField.appendChild(shoot);
+
+                setTimeout(function () {
+                    enableToShoot = true;
+                }, 300)
+            }
+           
+        }
+
+
+        function KeyUp(e)
+        {
+            if (e.which == 87 || e.which == 83)
+            {
+                scrollingSpeed = initiallySpeed;
+            }
+            if (e.which == 68 || e.which == 65) {
+
+                Player.src = "Background.png";
+            }
+               
+            
+        }
+
+
+        Image.prototype.MoveDown = function (self)
+        {
+            (function f()
+            {
+                Scrolling(self);
+                if (parseInt(self.style.top) > 500) {
+                    
+                    var index = tableWithBackground.indexOf(self);
+                    self.remove();
+                    tableWithBackground.splice(index);
+                    
+                }
+                setTimeout(f, scrollingSpeed);
+                
+            }
+            )()
+        }
+
+        Image.prototype.Shoot = function(self)
+        {
+            (function f() {
+                ShootFly(self);
+                if (parseInt(self.style.top) < 0) {
+                    self.remove();
+                   
+                }
+                var _topShot, _leftShot, _topSth, _leftSth;
+
+                for (var i = 0; i < tableWithBackground.length; i++) {
+                    if (tableWithBackground[i] == null)
+                        continue;
+
+                     _topShot = parseInt(self.style.top);
+                     _leftShot = parseInt(self.style.left);
+                     _topSth = parseInt(tableWithBackground[i].style.top);
+                     _leftSth = parseInt(tableWithBackground[i].style.left)
+
+                     if (_topShot == _topSth + parseInt(tableWithBackground[i].style.height) &&
+                        _leftShot > _leftSth &&
+                        _leftShot < _leftSth + parseInt(tableWithBackground[i].style.width))
+                    {
+                        
+                       
+                        
+                         tableWithBackground[i].remove();
+                         var index = tableWithBackground.indexOf(tableWithBackground[i]);
+                         
+                       tableWithBackground.splice(index);
+                      
+                        self.remove();
+                    }
+                }
+               
+
+                setTimeout(f, bulletSpeed);
+
+            }
+            )()
+        }
+
+        
+
+        function Scrolling(e) {
+            e.style.top = parseInt(e.style.top) + 1;
+        }
+        
+        function ShootFly(e)
+        {
+            e.style.top = parseInt(e.style.top) - 10;
+        }
+        
+
+    </script>
+</head>
+<body> 
+    
+    <div id="PlayField" style="position:absolute;top:0px;left:0px;width:500px;height:500px;background-color:brown">
+        <canvas style="position:absolute;top:0px;left:0px;width:500px;height:500px;background-color:blue"></canvas>
+        
+    </div>
+    
+</body>
+</html>

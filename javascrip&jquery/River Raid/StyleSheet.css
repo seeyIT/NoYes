@@ -1,0 +1,84 @@
+﻿#PlayField
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:500px;
+    height:500px;
+    background-color:blue;
+
+}
+
+#GUI
+{
+    position:absolute;
+    top:500px;
+    left:0px;
+    width:500px;
+    height:100px;
+    background-color:grey;
+    border-top:5px black solid;
+}
+
+#PointsContainer
+{
+    position:absolute;
+    left:150px;
+    top:0px;
+    width:200px;
+    height:35px;
+}
+
+#FuelContainer
+{
+    position:absolute;
+    left:150px;
+    top:35px;
+    width:200px;
+    height:35px;
+    
+}
+
+#FuelBackground
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:200px;
+    height:35px;
+    background-image: url("img/FuelGauge.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 100% 100%;
+}
+
+#FuelPoint
+{
+    position:relative;
+    display:inline;
+    width:10px;
+    height:25px;
+    left:175px;
+    top:10px;
+}
+
+#LiveContainer
+{
+    position:absolute;
+    left:120px;
+    top:70px;
+    width:30px;
+    height:30px;
+}
+
+
+
+#ActivisionContainer
+{
+    position:absolute;
+    left:180px;
+    top:70px;
+    width:170px;
+    height:30px;
+}
+

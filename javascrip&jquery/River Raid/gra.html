@@ -1,0 +1,137 @@
+﻿﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>gra</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="Prototypes.js"></script>
+    <script src="Utils.js"></script>
+    <script src="Map.js"></script>
+    <script src="Enemies.js"></script>
+    <script src="Fuel.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <script>
+        window.addEventListener("load", Start, false);
+        window.addEventListener("keypress", PressKey, false);
+        window.addEventListener("keyup", KeyUp, false);
+        //document.addEventListener("click")
+        var tableWithPoints = ["img/0.png", "img/1.png", "img/2.png", "img/3.png", "img/4.png", "img/5.png", "img/6.png", "img/7.png", "img/8.png", "img/9.png"];
+        var lives = 4;
+       
+        var playField;
+        var tableWithEnemy;
+        var tableWithBackgorund = [];
+        var tableWithFuel = [];
+        var tableWithFuelPosition;
+        var tableWithAI;
+        var scrollingSpeed = 10;
+        var initiallySpeed = 10;
+        var bulletSpeed = 40;
+        var enableToShoot = true;
+        var score = 0;
+        var bridgeCounter = 0;
+        var bridgeToSpawn = 0;
+        var bridgeToDestroy =new Image();
+        var fuelLevel = 155;
+        var rightMove = false;
+        var leftMove = false;
+        var gameIsPlaying = true;
+        var buttonEnable = false;
+        var Player = new Image();
+        var fuelBuffor = 0;
+        var ableToStartFly = false;
+        var audio;
+        var audioShot;
+        var audioDestroy;
+
+        var currentTrack;
+        var tableWithMap;
+
+       
+
+        //console.log(tableWithMap)
+        function Start() {
+            lives = localStorage.getItem("lives");
+
+            
+                //bridgeCounter = localStorage.getItem("bridgeCounter");
+                //bridgeToSpawn = localStorage.getItem("bridgeToSpawn");
+            
+            
+
+            playField = document.getElementById("PlayField");
+            audio = new Audio();
+            audioShot = new Audio();
+            audioDestroy = new Audio();
+
+
+            //FuelLevel();
+            CountScore();
+            CountLive();
+           
+
+            tableWithEnemy = [];
+            tableWithBackgorund = [];
+            //12x8
+           
+            //scrollingSpeed = 30;
+            //initiallySpeed = scrollingSpeed;
+            bulletSpeed = 10;
+            enableToShoot = true;
+            
+            
+            rightMove = false;
+            leftMove = false;
+                                    
+            ActivisionAnim();
+            AnimStart();
+            SpawnBackground();
+        }
+
+
+
+        function AnimStart() {
+            SpawnAdditionalBackground();
+            scrollingSpeed = 5;
+
+            setTimeout(function() {
+                    gameIsPlaying = false;
+                    scrollingSpeed = 10;
+                    SpawnPlayer();
+                    ableToStartFly = true;
+            },
+               2310);
+        }
+
+        
+        
+        function Update() {
+            PlayerMovementHorizontal();
+            setTimeout(Update, 15);
+
+            
+        }
+        
+        
+        
+    </script>
+</head>
+<body> 
+    
+    <div id="PlayField" style="z-index: -2" >
+        
+    </div>
+<div id="GUI">
+    <div id="PointsContainer"></div>
+    <div id="FuelContainer">
+        <img id="FuelPoint" src="img/FuelPoint.png" alt="Gauge"/>
+        <div id="FuelBackground"></div>
+    </div>
+    <div id="LiveContainer"></div>
+    <div id="ActivisionContainer"></div>
+</div>
+    <audio id="Audio">
+        <source src=""/>
+    </audio>
+</body>
+</html>
