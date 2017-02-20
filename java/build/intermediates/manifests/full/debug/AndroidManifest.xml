@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.seeyit.qwe"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.seeyit.qwe.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.Main2Activity"
+            android:label="@string/title_activity_main2" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.AlbumsActivity"
+            android:label="@string/title_activity_albums" >
+        </activity>
+
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+        <activity
+            android:name="com.example.seeyit.qwe.GalleryActivity"
+            android:label="@string/title_activity_gallery" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.SinglePhotoActivity"
+            android:label="@string/title_activity_single_photo" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.CameraActivity"
+            android:label="@string/title_activity_camera" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.CollageActivity"
+            android:label="@string/title_activity_collage" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.ChooseCollageActivity"
+            android:label="@string/title_activity_choose_collage" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.PhotoEditActivity"
+            android:label="@string/title_activity_photo_edit" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.FontPickerActivity"
+            android:label="@string/title_activity_font_picker" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.FOOBARActivity"
+            android:label="@string/title_activity_foobar" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.ColorPickerActivity"
+            android:label="@string/title_activity_color_picker" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.ColorActivity"
+            android:label="@string/title_activity_color" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.NetworkingActivity"
+            android:label="@string/title_activity_networking" >
+        </activity>
+        <activity
+            android:name="com.example.seeyit.qwe.NETActivity"
+            android:label="@string/title_activity_net" >
+        </activity>
+    </application>
+
+</manifest>
