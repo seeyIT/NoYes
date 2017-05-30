@@ -1,0 +1,1 @@
+D:\szkola\C#\delegaty\delegaty\bin\Debug\delegaty.exe.config

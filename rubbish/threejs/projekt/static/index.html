@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <script src="Model.js"></script>
+<script type="text/javascript" src="three.min.js"></script>
+    <script type="text/javascript" src="Panel.js"></script>
+    <script src="Light.js"></script>
+    <script src="Field.js"></script>
+    <script src="DDSLoader.js"></script>
+    <script src="OBJLoader.js"></script>
+    <script src="MTLLoader.js"></script>
+    <script src="PlayField.js"></script>
+    <script src="keyboard.js"></script>
+    <script src="socketio.js"></script>
+    <script src="Utils.js"></script>
+    <script src="MouseKeyboard.js"></script>
+
+<title>Hello World</title>
+  
+    <script>
+            window.addEventListener("load", Start);
+            function Start()
+            {
+
+                scene = new THREE.Scene();
+
+                camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 10000);
+
+                var renderer = new THREE.WebGLRenderer();
+                renderer.setClearColor(0x000000);
+                renderer.setSize(window.innerWidth, window.innerHeight);
+
+                camera.position.x = 0;
+                camera.position.y = 900;
+                camera.position.z = 700;
+                
+                var cameraLookAtPoint = new THREE.Vector3(0, 0, 0);
+                camera.lookAt(cameraLookAtPoint);
+                document.getElementById("Board").appendChild(renderer.domElement);
+                var axis = new THREE.AxisHelper(200);
+                scene.add(axis);
+                
+                var playField = new PlayField(function() {
+                    startGame(fieldsTable);
+
+                    //wylaczyc intro
+                });
+
+                var fieldsTable = [
+                    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+                ]
+
+
+
+                
+
+
+                function startGame(fieldsTable) {
+
+                    clearBoard();
+                    playField.setCards(fieldsTable);
+                    
+                    var _playField = playField.spawnPlayField();
+                    playFieldTable = playField.spawnPlayFieldTable();
+
+                    scene.add(_playField);
+                    getEmptyField();
+                }
+
+                //leci socket na wejscie i dostaje od servera tablice od 1 do 30 a 0 to puste pola, ta tablice przekazuje do playfilda i sie wykonuje
+                //io.on{ 5 linijek z gory}'
+               
+                document.addEventListener("click", onMouseDown);
+                document.addEventListener("mousemove", onMouseMove);
+                document.addEventListener("keydown", onKeyDown);
+
+
+
+                function AnimateScene() {
+                    requestAnimationFrame(AnimateScene);
+                    renderer.render(scene, camera);
+                }
+                AnimateScene();
+                
+            }
+
+            var currentElement = null;
+            var startPositionX = 0;
+            var startPositionZ = 0;
+         
+            var firstCard = null;
+            var canMakeMove = true;
+            var isCheckingCards = false;
+            var playFieldTable;
+
+           
+
+    </script>
+    
+</head>
+<body style="margin:0px">
+    <div id="Board" ></div>
+</body>
+</html>

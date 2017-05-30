@@ -1,0 +1,17 @@
+C:\Users\Patryk\Desktop\Komunikacja\Klient\Klient\obj\Release\Klient.exe
+C:\Users\Patryk\Desktop\Komunikacja\Klient\Klient\obj\Release\Klient.pdb
+C:\Users\Patryk\Desktop\Komunikacja\Klient\Klient\bin\Release\Klient.exe
+C:\Users\Patryk\Desktop\Komunikacja\Klient\Klient\bin\Release\Klient.pdb
+C:\Users\Patryk\Desktop\Komunikacja\Klient\Klient\obj\Release\Klient.csprojResolveAssemblyReference.cache
+C:\Users\Patryk\Desktop\Komunikacja\Klient\Klient\obj\Release\Klient.Klient.resources
+C:\Users\Patryk\Desktop\Komunikacja\Klient\Klient\obj\Release\Klient.Properties.Resources.resources
+C:\Users\Patryk\Desktop\Komunikacja\Klient\Klient\obj\Release\Klient.csproj.GenerateResource.Cache
+C:\Users\seeyIT\Desktop\Klient\Klient\obj\Release\Klient.exe
+C:\Users\seeyIT\Desktop\Klient\Klient\obj\Release\Klient.pdb
+C:\Users\seeyIT\Desktop\Klient\Klient\bin\Release\Klient.exe
+C:\Users\seeyIT\Desktop\Klient\Klient\bin\Release\Klient.pdb
+C:\Users\seeyIT\Desktop\Klient\Klient\obj\Release\Klient.csprojResolveAssemblyReference.cache
+C:\Users\seeyIT\Desktop\Klient\Klient\obj\Release\Klient.Klien.resources
+C:\Users\seeyIT\Desktop\Klient\Klient\obj\Release\Klient.Properties.Resources.resources
+C:\Users\seeyIT\Desktop\Klient\Klient\obj\Release\Klient.csproj.GenerateResource.Cache
+C:\Users\seeyIT\Desktop\Klient\Klient\bin\Release\Klient.exe.config

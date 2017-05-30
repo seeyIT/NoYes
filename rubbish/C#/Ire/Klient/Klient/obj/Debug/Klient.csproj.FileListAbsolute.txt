@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\Komunikacja\Komunikacja\Klient\Klient\bin\Debug\Klient.exe
+C:\Users\user\Desktop\Komunikacja\Komunikacja\Klient\Klient\bin\Debug\Klient.pdb
+C:\Users\user\Desktop\Komunikacja\Komunikacja\Klient\Klient\obj\Debug\Klient.Properties.Resources.resources
+C:\Users\user\Desktop\Komunikacja\Komunikacja\Klient\Klient\obj\Debug\Klient.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Komunikacja\Komunikacja\Klient\Klient\obj\Debug\Klient.exe
+C:\Users\user\Desktop\Komunikacja\Komunikacja\Klient\Klient\obj\Debug\Klient.pdb
+C:\Users\user\Desktop\Komunikacja\Komunikacja\Klient\Klient\obj\Debug\Klient.Klien.resources
+C:\Users\user\Desktop\Komunikacja\Komunikacja\Klient\Klient\obj\Debug\Klient.csprojResolveAssemblyReference.cache

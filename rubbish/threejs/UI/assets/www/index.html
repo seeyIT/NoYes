@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  
+        <script type="text/javascript" src="three.js"></script>
+        <title>Hello World</title>
+        <style>
+            #Board {
+                margin: 0px;
+                overflow: hidden;
+            }
+        </style>
+
+        <script>
+            window.addEventListener("load", Start);
+            function Start()
+            {
+                var geometryObjects = [new THREE.BoxGeometry( 20,20,20,1, 1, 1 ),new THREE.CubeGeometry(20, 20, 20, 1, 1, 1),new THREE.CircleGeometry( 20, 20 ),new THREE.CylinderGeometry( 5, 5, 20, 32 )];
+                console.log(geometryObjects[1].type)
+                var scene = new THREE.Scene();
+                var camera = new THREE.PerspectiveCamera(45, 4 / 3, 0.1, 10000);                
+                var renderer = new THREE.WebGLRenderer();
+                var material = new THREE.MeshBasicMaterial({ color: 0xff00ff, side: THREE.DoubleSide });
+                
+                var geometry = new THREE.CubeGeometry(20, 20, 20, 1, 1, 1);
+                var mesh = new THREE.Mesh(geometry, material);
+                var speed;
+                var size;
+                var FOV;
+
+                renderer.setClearColor(0xddffdd);
+                renderer.setSize(500, 500);
+
+                scene.add(mesh);
+
+                document.getElementById("Board").appendChild(renderer.domElement);
+
+                camera.position.x = -200;
+                camera.position.y = 20;
+                camera.position.z = 200;
+
+                camera.lookAt(mesh.position);
+
+
+                
+
+
+               
+
+
+
+
+
+
+
+
+
+                AnimateScene();
+
+                function AnimateScene()
+                {
+                    var GUIxPos = document.getElementById("GUIxPos").value;
+                   
+
+
+                    speed = document.getElementById("Speed").value;
+                    size = document.getElementById("Size").value / 10;
+                    FOV = document.getElementById("FOV").value;
+                   
+                    camera.fov = FOV;
+                    camera.updateProjectionMatrix();
+
+                    mesh.rotation.y -= speed / 100;
+                    mesh.scale.set(size, size, size);
+
+                    var newObject = document.getElementById("RenderedObject");
+                    var index = newObject[newObject.selectedIndex].value
+                    
+                    mesh.geometry = geometryObjects[index];
+
+                    requestAnimationFrame(AnimateScene);
+                    renderer.render(scene, camera);
+                }
+
+                var selectedObject;
+                document.addEventListener("mousedown", onMouseDown, false);
+                var raycaster = new THREE.Raycaster(); 
+                var mouseVector = new THREE.Vector2();
+
+                function onMouseDown(event) {
+
+
+                    mouseVector.x = (event.clientX / window.innerWidth) * 2 - 1;
+                    mouseVector.y = -(event.clientY / window.innerHeight) * 2 + 1;
+                    raycaster.setFromCamera(mouseVector, camera);
+                    var intersects = raycaster.intersectObjects(scene.children);
+                    if (intersects.length > 0) {
+
+
+                        console.log(intersects[0].object);
+                        selectedBox = intersects[0].object;
+                    }
+
+
+                }
+
+
+            }
+
+
+           
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        <div id="Board"></div>
+        <label>cos<input id="FOV" type="range" value="45" ></label>
+        <label>speed<input id="Speed" type="range" value="1"></label>
+        <label>size<input id="Size" type="range" value="10"></label>
+        <select id="RenderedObject">
+            <option id="BoxGeometry" value="0">BoxGeometry</option>
+            <option id="CubeGeometry" value="1">CubeGeometry</option>
+            <option id="CircleGeometry" value="2">CircleGeometry</option>
+            <option id="CylinderGeometry" value="3">CylinderGeometry</option>
+            <option id="DodecahedronGeometry" value="4">DodecahedronGeometry</option>
+            <option id="IcosahedronGeometry" value="5">IcosahedronGeometry</option>
+            <option id="OctahedronGeometry" value="6">OctahedronGeometry</option>
+            <option id="PlaneGeometry" value="7">PlaneGeometry</option>
+            <option id="RingGeometry" value="8">RingGeometry</option>
+            <option id="SphereGeometry" value="9">SphereGeometry</option>
+            <option id="TetrahedronGeometry" value="10">TetrahedronGeometry</option>
+            <option id="TorusGeometry" value="11">TorusGeometry</option>            
+        </select>
+
+
+        <div id="Transform">
+            <label>X
+                <input style="width:30px" value="" id="GUIxPos"/>
+            </label>
+            <input type="range" />
+
+        </div>
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
+        
+    </body>
+</html>

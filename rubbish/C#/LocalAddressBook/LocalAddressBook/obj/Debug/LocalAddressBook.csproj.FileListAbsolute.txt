@@ -1,0 +1,14 @@
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\bin\Debug\LocalAddressBook.exe.config
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\bin\Debug\AddressBook.mdf
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\bin\Debug\AddressBook_log.ldf
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\bin\Debug\LocalAddressBook.exe
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\bin\Debug\LocalAddressBook.pdb
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\obj\Debug\LocalAddressBook.csprojResolveAssemblyReference.cache
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\obj\Debug\LocalAddressBook.Form1.resources
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\obj\Debug\LocalAddressBook.Properties.Resources.resources
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\obj\Debug\LocalAddressBook.csproj.GenerateResource.Cache
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\obj\Debug\LocalAddressBook.exe
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\obj\Debug\LocalAddressBook.pdb
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\obj\Debug\LocalAddressBook.Szukaj.resources
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\obj\Debug\LocalAddressBook.Dodawanie.resources
+D:\szkola\C#\LocalAddressBook\LocalAddressBook\obj\Debug\LocalAddressBook.Aktualizacja.resources

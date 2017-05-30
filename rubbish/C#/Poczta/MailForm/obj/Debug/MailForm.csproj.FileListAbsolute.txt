@@ -1,0 +1,66 @@
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\ApplicationInsights.config
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\csc.exe
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\System.Collections.Immutable.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\vbc.exe
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\VBCSCompiler.exe
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\roslyn\VBCSCompiler.exe.config
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\MailForm.dll.config
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\MailForm.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\MailForm.pdb
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.Web.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.WindowsServer.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.ApplicationInsights.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.Web.xml
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.AI.WindowsServer.xml
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.ApplicationInsights.xml
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\obj\Debug\MailForm.csprojResolveAssemblyReference.cache
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\obj\Debug\MailForm.dll
+c:\users\mastela łukasz\documents\visual studio 2015\Projects\MailForm\MailForm\obj\Debug\MailForm.pdb
+D:\szkola\C#\Poczta\MailForm\bin\ApplicationInsights.config
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\csc.exe
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\System.Collections.Immutable.dll
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\System.Reflection.Metadata.dll
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\vbc.exe
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\VBCSCompiler.exe
+D:\szkola\C#\Poczta\MailForm\bin\roslyn\VBCSCompiler.exe.config
+D:\szkola\C#\Poczta\MailForm\bin\MailForm.dll.config
+D:\szkola\C#\Poczta\MailForm\bin\MailForm.dll
+D:\szkola\C#\Poczta\MailForm\bin\MailForm.pdb
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.Agent.Intercept.dll
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.DependencyCollector.dll
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.Web.dll
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.WindowsServer.dll
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.ApplicationInsights.dll
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.DependencyCollector.xml
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.Web.xml
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.AI.WindowsServer.xml
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.ApplicationInsights.xml
+D:\szkola\C#\Poczta\MailForm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\szkola\C#\Poczta\MailForm\obj\Debug\MailForm.csprojResolveAssemblyReference.cache
+D:\szkola\C#\Poczta\MailForm\obj\Debug\MailForm.dll
+D:\szkola\C#\Poczta\MailForm\obj\Debug\MailForm.pdb

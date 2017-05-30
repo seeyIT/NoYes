@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <script src="libs/jquery-2.2.0.min.js"></script>
+    <script src="Net.js"></script>
+    <script src="libs/three.js"></script>
+    <script src="UI.js"></script>
+    <title>Hello World</title>
+    <style>
+        body 
+        {
+            display: block;
+            margin: 0px;
+        }
+        #Board 
+        {
+            margin: 0px;
+            width:100vw;
+            height:100vh; 
+            position:absolute;
+            top:0px;
+            left:0px;
+        }
+       .songs {
+           width: 490px;
+           height: 50px;
+           background-color: green;
+           margin: 5px;
+       }
+    </style>
+
+    <script>
+
+        //czerwone x
+        //niebiski z
+        //zolte/zielone y
+        window.addEventListener("load", Start);
+
+        var net;
+        var ui
+        function Start()
+        {
+            net = new Net();
+            setTimeout(function () { ui = new UI(); }, 500)
+            
+           
+        }
+
+
+    </script>
+    <script>
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+   
+    <div id="Board"></div>
+    <audio id="audio" controls>
+        <source src=""
+                id="audio_src"
+                type="audio/mp3"/>
+    </audio>
+    <div id="visual" style="width: 300px; height: 300px; position: absolute;left:1400px"></div>
+</body>
+</html>

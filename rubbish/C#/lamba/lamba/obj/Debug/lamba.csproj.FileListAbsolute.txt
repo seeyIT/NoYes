@@ -1,0 +1,6 @@
+D:\szkola\C#\lamba\lamba\bin\Debug\lamba.exe.config
+D:\szkola\C#\lamba\lamba\obj\Debug\lamba.csprojResolveAssemblyReference.cache
+D:\szkola\C#\lamba\lamba\bin\Debug\lamba.exe
+D:\szkola\C#\lamba\lamba\bin\Debug\lamba.pdb
+D:\szkola\C#\lamba\lamba\obj\Debug\lamba.exe
+D:\szkola\C#\lamba\lamba\obj\Debug\lamba.pdb

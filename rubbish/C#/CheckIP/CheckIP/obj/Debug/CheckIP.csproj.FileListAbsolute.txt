@@ -1,0 +1,5 @@
+D:\szkola\C#\CheckIP\CheckIP\bin\Debug\CheckIP.exe.config
+D:\szkola\C#\CheckIP\CheckIP\bin\Debug\CheckIP.exe
+D:\szkola\C#\CheckIP\CheckIP\bin\Debug\CheckIP.pdb
+D:\szkola\C#\CheckIP\CheckIP\obj\Debug\CheckIP.exe
+D:\szkola\C#\CheckIP\CheckIP\obj\Debug\CheckIP.pdb

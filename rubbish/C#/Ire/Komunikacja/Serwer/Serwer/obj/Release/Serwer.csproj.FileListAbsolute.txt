@@ -1,0 +1,16 @@
+C:\Users\Patryk\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.exe
+C:\Users\Patryk\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.pdb
+C:\Users\Patryk\Desktop\Komunikacja\Serwer\Serwer\bin\Release\Serwer.exe
+C:\Users\Patryk\Desktop\Komunikacja\Serwer\Serwer\bin\Release\Serwer.pdb
+C:\Users\Patryk\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.csprojResolveAssemblyReference.cache
+C:\Users\Patryk\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.Properties.Resources.resources
+C:\Users\Patryk\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.frmSerwer.resources
+C:\Users\Patryk\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.csproj.GenerateResource.Cache
+C:\Users\seeyIT\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.exe
+C:\Users\seeyIT\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.pdb
+C:\Users\seeyIT\Desktop\Komunikacja\Serwer\Serwer\bin\Release\Serwer.exe
+C:\Users\seeyIT\Desktop\Komunikacja\Serwer\Serwer\bin\Release\Serwer.pdb
+C:\Users\seeyIT\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.csprojResolveAssemblyReference.cache
+C:\Users\seeyIT\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.Properties.Resources.resources
+C:\Users\seeyIT\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.frmSerwer.resources
+C:\Users\seeyIT\Desktop\Komunikacja\Serwer\Serwer\obj\Release\Serwer.csproj.GenerateResource.Cache

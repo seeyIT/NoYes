@@ -1,0 +1,9 @@
+D:\szkola\C#\Komunikator\Komunikator\bin\Debug\Komunikator.exe.config
+D:\szkola\C#\Komunikator\Komunikator\bin\Debug\Komunikator.exe
+D:\szkola\C#\Komunikator\Komunikator\bin\Debug\Komunikator.pdb
+D:\szkola\C#\Komunikator\Komunikator\obj\Debug\Komunikator.csprojResolveAssemblyReference.cache
+D:\szkola\C#\Komunikator\Komunikator\obj\Debug\Komunikator.Form1.resources
+D:\szkola\C#\Komunikator\Komunikator\obj\Debug\Komunikator.Properties.Resources.resources
+D:\szkola\C#\Komunikator\Komunikator\obj\Debug\Komunikator.csproj.GenerateResource.Cache
+D:\szkola\C#\Komunikator\Komunikator\obj\Debug\Komunikator.exe
+D:\szkola\C#\Komunikator\Komunikator\obj\Debug\Komunikator.pdb
