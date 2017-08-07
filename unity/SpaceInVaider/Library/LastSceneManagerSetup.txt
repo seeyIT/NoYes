@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scanes/Level_3.unity
-  isLoaded: 1
-  isActive: 1

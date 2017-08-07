@@ -1,9 +1,0 @@
-D:\szkola\C#\HelloWorldWindows\HelloWorldWindows\bin\Debug\HelloWorldWindows.exe.config
-D:\szkola\C#\HelloWorldWindows\HelloWorldWindows\bin\Debug\HelloWorldWindows.exe
-D:\szkola\C#\HelloWorldWindows\HelloWorldWindows\bin\Debug\HelloWorldWindows.pdb
-D:\szkola\C#\HelloWorldWindows\HelloWorldWindows\obj\Debug\HelloWorldWindows.csprojResolveAssemblyReference.cache
-D:\szkola\C#\HelloWorldWindows\HelloWorldWindows\obj\Debug\HelloWorldWindows.Properties.Resources.resources
-D:\szkola\C#\HelloWorldWindows\HelloWorldWindows\obj\Debug\HelloWorldWindows.csproj.GenerateResource.Cache
-D:\szkola\C#\HelloWorldWindows\HelloWorldWindows\obj\Debug\HelloWorldWindows.exe
-D:\szkola\C#\HelloWorldWindows\HelloWorldWindows\obj\Debug\HelloWorldWindows.pdb
-D:\szkola\C#\HelloWorldWindows\HelloWorldWindows\obj\Debug\HelloWorldWindows.fMainWindow.resources

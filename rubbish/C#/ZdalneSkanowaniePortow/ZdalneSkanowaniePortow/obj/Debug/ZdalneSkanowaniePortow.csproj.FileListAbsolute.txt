@@ -1,9 +1,0 @@
-D:\szkola\C#\ZdalneSkanowaniePortow\ZdalneSkanowaniePortow\bin\Debug\ZdalneSkanowaniePortow.exe.config
-D:\szkola\C#\ZdalneSkanowaniePortow\ZdalneSkanowaniePortow\bin\Debug\ZdalneSkanowaniePortow.exe
-D:\szkola\C#\ZdalneSkanowaniePortow\ZdalneSkanowaniePortow\bin\Debug\ZdalneSkanowaniePortow.pdb
-D:\szkola\C#\ZdalneSkanowaniePortow\ZdalneSkanowaniePortow\obj\Debug\ZdalneSkanowaniePortow.csprojResolveAssemblyReference.cache
-D:\szkola\C#\ZdalneSkanowaniePortow\ZdalneSkanowaniePortow\obj\Debug\ZdalneSkanowaniePortow.Form1.resources
-D:\szkola\C#\ZdalneSkanowaniePortow\ZdalneSkanowaniePortow\obj\Debug\ZdalneSkanowaniePortow.Properties.Resources.resources
-D:\szkola\C#\ZdalneSkanowaniePortow\ZdalneSkanowaniePortow\obj\Debug\ZdalneSkanowaniePortow.csproj.GenerateResource.Cache
-D:\szkola\C#\ZdalneSkanowaniePortow\ZdalneSkanowaniePortow\obj\Debug\ZdalneSkanowaniePortow.exe
-D:\szkola\C#\ZdalneSkanowaniePortow\ZdalneSkanowaniePortow\obj\Debug\ZdalneSkanowaniePortow.pdb

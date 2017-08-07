@@ -1,1 +1,0 @@
-D:\szkola\C#\monster\monster\bin\Debug\monster.exe.config

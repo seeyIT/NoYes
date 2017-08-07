@@ -1,8 +1,0 @@
-C:\Users\user\Desktop\Komunikacja\Komunikacja\Serwer\Serwer\bin\Debug\Serwer.exe
-C:\Users\user\Desktop\Komunikacja\Komunikacja\Serwer\Serwer\bin\Debug\Serwer.pdb
-C:\Users\user\Desktop\Komunikacja\Komunikacja\Serwer\Serwer\obj\Debug\Serwer.csprojResolveAssemblyReference.cache
-C:\Users\user\Desktop\Komunikacja\Komunikacja\Serwer\Serwer\obj\Debug\Serwer.Properties.Resources.resources
-C:\Users\user\Desktop\Komunikacja\Komunikacja\Serwer\Serwer\obj\Debug\Serwer.frmSerwer.resources
-C:\Users\user\Desktop\Komunikacja\Komunikacja\Serwer\Serwer\obj\Debug\Serwer.csproj.GenerateResource.Cache
-C:\Users\user\Desktop\Komunikacja\Komunikacja\Serwer\Serwer\obj\Debug\Serwer.exe
-C:\Users\user\Desktop\Komunikacja\Komunikacja\Serwer\Serwer\obj\Debug\Serwer.pdb

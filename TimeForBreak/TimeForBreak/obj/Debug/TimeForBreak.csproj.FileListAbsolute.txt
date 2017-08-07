@@ -1,9 +1,0 @@
-D:\programowanie\TimeForBreak\TimeForBreak\bin\Debug\TimeForBreak.exe.config
-D:\programowanie\TimeForBreak\TimeForBreak\bin\Debug\TimeForBreak.exe
-D:\programowanie\TimeForBreak\TimeForBreak\bin\Debug\TimeForBreak.pdb
-D:\programowanie\TimeForBreak\TimeForBreak\obj\Debug\TimeForBreak.csprojResolveAssemblyReference.cache
-D:\programowanie\TimeForBreak\TimeForBreak\obj\Debug\TimeForBreak.Properties.Resources.resources
-D:\programowanie\TimeForBreak\TimeForBreak\obj\Debug\TimeForBreak.csproj.GenerateResource.Cache
-D:\programowanie\TimeForBreak\TimeForBreak\obj\Debug\TimeForBreak.exe
-D:\programowanie\TimeForBreak\TimeForBreak\obj\Debug\TimeForBreak.pdb
-D:\programowanie\TimeForBreak\TimeForBreak\obj\Debug\TimeForBreak.Form1.resources

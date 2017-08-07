@@ -1,6 +1,0 @@
-D:\szkola\C#\Watki\Watki\bin\Debug\Watki.exe.config
-D:\szkola\C#\Watki\Watki\bin\Debug\Watki.exe
-D:\szkola\C#\Watki\Watki\bin\Debug\Watki.pdb
-D:\szkola\C#\Watki\Watki\obj\Debug\Watki.csprojResolveAssemblyReference.cache
-D:\szkola\C#\Watki\Watki\obj\Debug\Watki.exe
-D:\szkola\C#\Watki\Watki\obj\Debug\Watki.pdb

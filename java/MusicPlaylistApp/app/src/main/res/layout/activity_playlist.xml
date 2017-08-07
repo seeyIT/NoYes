@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_playlist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.seeyit.musicplaylistapp.PlaylistActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:id="@+id/playListNavBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Title placeholder"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:padding="5dp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/playlistName"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/addSong"
+            android:onClick="addSong"
+            />
+    </RelativeLayout>
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/playListGridView"
+        android:layout_below="@+id/playListNavBar"/>
+</RelativeLayout>
