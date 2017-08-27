@@ -14,14 +14,18 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
+
+    //TODO animation ?
 
     private Context _context;
     private ImageView smile;
     private Spinner _modeSpinner;
     private SeekBar _speedSlider;
     private ArrayAdapter<String> _modeOptionsArrayAdapter;
-    private String[] _modeOptions = new String[4];
+    private String[] _modeOptions = new String[3];
     private RelativeLayout.LayoutParams _params;
     private Runnable[] _runnableArray = new Runnable[4];
     private Runnable _currentRunnable;
@@ -33,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
     private int _arrayPointInterator = 0;
     private double _angle = 0;
     private double _speed = 0.05;
-    private Point[] _trianglePoints = new Point[3];
     private Point[] _squarePoints = new Point[4];
     private final Handler handler = new Handler();
-    private boolean _reachedPoint = false;
-
+    private boolean _reachedX = false;
+    private boolean _reachedY = false;
+    private Random _random;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,27 +69,24 @@ public class MainActivity extends AppCompatActivity {
         _speedSlider.setProgress(50);
         _params = new RelativeLayout.LayoutParams(200, 200);
 
+        //TODO to res
         _modeOptions[0] = "Circle";
-        _modeOptions[1] = "Trinagle";
-        _modeOptions[2] = "Square";
-        _modeOptions[3] = "Random";
+        _modeOptions[1] = "Square";
+        _modeOptions[2] = "Random";
 
         _modeOptionsArrayAdapter = new ArrayAdapter<String>(_context,android.R.layout.simple_list_item_1,_modeOptions);
         _modeSpinner.setAdapter(_modeOptionsArrayAdapter);
 
+        _random = new Random();
 
     }
 
     private void initPoints()
     {
-        _trianglePoints[0] = new Point(_screenWidth/2 - 200, _screenHeight/2 + 200);
-        _trianglePoints[1] = new Point(_screenWidth/2 + 200, _screenHeight/2 + 200);
-        _trianglePoints[2] = new Point(_screenWidth/2 , _screenHeight/2 - 200);
-
-        _squarePoints[0] = new Point(_screenWidth/2 - 100, _screenHeight/2 - 100);
-        _squarePoints[1] = new Point(_screenWidth/2 + 100, _screenHeight/2 - 100);
-        _squarePoints[2] = new Point(_screenWidth/2 + 100, _screenHeight/2 + 100);
-        _squarePoints[3] = new Point(_screenWidth/2 - 100, _screenHeight/2 + 100);
+        _squarePoints[0] = new Point(_screenWidth/2 - 500, _screenHeight/2 - 400);
+        _squarePoints[1] = new Point(_screenWidth/2 + 300, _screenHeight/2 - 400);
+        _squarePoints[2] = new Point(_screenWidth/2 + 300, _screenHeight/2 + 400);
+        _squarePoints[3] = new Point(_screenWidth/2 - 500, _screenHeight/2 + 400);
     }
     private void initRunnables()
     {
@@ -101,141 +102,145 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        _currentPoint = _trianglePoints[0];
+        _currentPoint = _squarePoints[0];
+        _params.leftMargin = _squarePoints[0].getX();
+        _params.topMargin = _squarePoints[0].getY();
+        smile.setLayoutParams(_params);
+
+        _params.topMargin = _screenHeight / 2 - 150 + (int) (Math.cos(_angle) * 250);
         _runnableArray[1] = new Runnable() {
             @Override
             public void run() {
-                handler.postDelayed(this, 1);
-
-
-                if(_currentPoint.getX() - smile.getX() > 2)
-                {
-                    smile.setX(smile.getX()+3);
-                }
-                else if (_currentPoint.getX() - smile.getX() < -2 )
-                {
-                    smile.setX(smile.getX()-3);
-                }
-                else
-                {
-                    if(_reachedPoint)
-                    {
-                        _reachedPoint = false;
-                        ++_arrayPointInterator;
-                        if(_arrayPointInterator >= 3)
-                        {
-                            _arrayPointInterator = 0;
-                        }
-                        _currentPoint = _trianglePoints[_arrayPointInterator];
-
-                    }
-                    else
-                    {
-                        _reachedPoint = true;
-
-                    }
-
-                }
-
-                if(_currentPoint.getY() - smile.getY() > 2)
-                {
-                    smile.setY(smile.getY()+3);
-                }
-                else if (_currentPoint.getY() - smile.getY() < -2 )
-                {
-                    smile.setY(smile.getY()-3);
-                }
-                else
-                {
-                    if(_reachedPoint)
-                    {
-                        _reachedPoint = false;
-                        ++_arrayPointInterator;
-                        if(_arrayPointInterator >= 3)
-                        {
-                            _arrayPointInterator = 0;
-                        }
-                        _currentPoint = _trianglePoints[_arrayPointInterator];
-                    }
-                    else
-                    {
-                        _reachedPoint = true;
-                    }
-                }
-                Log.e("goalx",_currentPoint.getX()+" , "+_currentPoint.getY());
-            }
-        };
-        _runnableArray[2] = new Runnable() {
-            @Override
-            public void run() {
                 handler.postDelayed(this, _intevalSpeed);
-                if(_currentPoint.getX() - smile.getX() > 2)
+
+
+                if(_currentPoint.getX() - smile.getX() > 4)
                 {
-                    smile.setX(smile.getX()+1);
+                    smile.setX(smile.getX()+5);
                 }
-                else if (_currentPoint.getX() - smile.getX() < -2 )
+                else if (_currentPoint.getX() - smile.getX() < -4 )
                 {
-                    smile.setX(smile.getX()-1);
+                    smile.setX(smile.getX()-5);
                 }
                 else
                 {
-                    if(_reachedPoint)
+                    if(_reachedY)
                     {
-                        _reachedPoint = false;
-                        ++_arrayPointInterator;
-                        if(_arrayPointInterator >= 3)
+                        _reachedX = false;
+                        _reachedY = false;
+                        _arrayPointInterator++;
+                        if(_arrayPointInterator >= 4)
                         {
                             _arrayPointInterator = 0;
                         }
-                        _currentPoint = _trianglePoints[_arrayPointInterator];
+                        else if(_arrayPointInterator <= -1)
+                        {
+                            _arrayPointInterator = 3;
+                        }
+                        _currentPoint = _squarePoints[_arrayPointInterator];
 
                     }
                     else
                     {
-                        _reachedPoint = true;
+                        _reachedX = true;
 
                     }
 
                 }
 
-                if(_currentPoint.getY() - smile.getY() > 2)
+                if(_currentPoint.getY() - smile.getY() > 4)
                 {
-                    smile.setY(smile.getY()+1);
+                    smile.setY(smile.getY()+5);
                 }
-                else if (_currentPoint.getY() - smile.getY() < -2 )
+                else if (_currentPoint.getY() - smile.getY() < -4 )
                 {
-                    smile.setY(smile.getY()-1);
+                    smile.setY(smile.getY()-5);
                 }
                 else
                 {
-                    if(_reachedPoint)
+                    if(_reachedX)
                     {
-                        _reachedPoint = false;
+                        _reachedX = false;
+                        _reachedY = false;
                         ++_arrayPointInterator;
                         if(_arrayPointInterator >= 4)
                         {
                             _arrayPointInterator = 0;
                         }
+                        else if(_arrayPointInterator <= -1)
+                        {
+                            _arrayPointInterator = 3;
+                        }
                         _currentPoint = _squarePoints[_arrayPointInterator];
                     }
                     else
                     {
-                        _reachedPoint = true;
+                        _reachedY = true;
+                    }
+                }
+                Log.e("goalx",_currentPoint.getX()+" , "+_currentPoint.getY());
+            }
+        };
+
+        _runnableArray[2] = new Runnable() {
+            @Override
+            public void run() {
+                handler.postDelayed(this, _intevalSpeed);
+                if(_currentPoint.getX() - smile.getX() > 4)
+                {
+                    smile.setX(smile.getX()+5);
+                }
+                else if (_currentPoint.getX() - smile.getX() < -4 )
+                {
+                    smile.setX(smile.getX()-5);
+                }
+                else
+                {
+                    if(_reachedY)
+                    {
+                        _reachedX = false;
+                        _reachedY = false;
+                        _arrayPointInterator++;
+                        _currentPoint = createRandomPoint();
+
+                    }
+                    else
+                    {
+                        _reachedX = true;
+
+                    }
+
+                }
+
+                if(_currentPoint.getY() - smile.getY() > 4)
+                {
+                    smile.setY(smile.getY()+5);
+                }
+                else if (_currentPoint.getY() - smile.getY() < -4 )
+                {
+                    smile.setY(smile.getY()-5);
+                }
+                else
+                {
+                    if(_reachedX)
+                    {
+                        _reachedX = false;
+                        _reachedY = false;
+
+                        _currentPoint = createRandomPoint();
+                    }
+                    else
+                    {
+                        _reachedY = true;
                     }
                 }
             }
         };
-        _runnableArray[3] = new Runnable() {
-            @Override
-            public void run() {
-                handler.postDelayed(this, _intevalSpeed);
 
-            }
-        };
-
-        _currentRunnable = _runnableArray[1];
+        _currentRunnable = _runnableArray[2];
     }
 
+    //TODO speed
     private void initListeners()
     {
         _modeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -272,6 +277,17 @@ public class MainActivity extends AppCompatActivity {
     private void interval() {
 
         handler.post(_currentRunnable);
+    }
+
+    private Point createRandomPoint()
+    {
+        return new Point(_random.nextInt(_screenWidth-200), _random.nextInt(_screenHeight-400)+200);
+    }
+
+    private void resetPostion()
+    {
+        _params.leftMargin = _screenWidth / 2 - 100;
+        _params.topMargin = _screenHeight / 2 - 150;
     }
 
     public void changeDirection(View view) {
