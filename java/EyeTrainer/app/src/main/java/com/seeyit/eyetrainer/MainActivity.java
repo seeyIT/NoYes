@@ -18,8 +18,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    //TODO animation ?
-
     private Context _context;
     private ImageView smile;
     private Spinner _modeSpinner;
@@ -32,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
     private Point _currentPoint;
     private int _screenWidth;
     private int _screenHeight;
-    private int _intevalSpeed = 15;
+    private int _smileX;
+    private int _smileY;
+    private int _intevalSpeed;
     private int _direction = 1;
     private int _arrayPointInterator = 0;
     private double _angle = 0;
@@ -66,13 +66,14 @@ public class MainActivity extends AppCompatActivity {
         _screenWidth = display.getWidth();
         _screenHeight = display.getHeight();
 
+        _smileX = _screenWidth/2;
+        _smileY = _screenHeight/2;
+
         _speedSlider.setProgress(50);
         _params = new RelativeLayout.LayoutParams(200, 200);
+        _intevalSpeed = 50/3;
 
-        //TODO to res
-        _modeOptions[0] = "Circle";
-        _modeOptions[1] = "Square";
-        _modeOptions[2] = "Random";
+        _modeOptions = getResources().getStringArray(R.array.modes);
 
         _modeOptionsArrayAdapter = new ArrayAdapter<String>(_context,android.R.layout.simple_list_item_1,_modeOptions);
         _modeSpinner.setAdapter(_modeOptionsArrayAdapter);
@@ -93,34 +94,29 @@ public class MainActivity extends AppCompatActivity {
         _runnableArray[0] = new Runnable() {
             @Override
             public void run() {
-                _angle = _angle + (_speed * _direction);
-                _params.leftMargin = _screenWidth / 2 - 100 + (int) (Math.sin(_angle) * 250);
-                _params.topMargin = _screenHeight / 2 - 150 + (int) (Math.cos(_angle) * 250);
-                smile.setLayoutParams(_params);
-//                Log.e("widht",smile.getX()+"");
+                _angle = _angle + (((double) _direction)/20);
+                smile.setX(_screenWidth / 2 - 100 + (int) (Math.sin(_angle) * 250));
+                smile.setY(_screenHeight / 2 - 150 + (int) (Math.cos(_angle) * 250));
                 handler.postDelayed(this, _intevalSpeed);
             }
         };
 
-        _currentPoint = _squarePoints[0];
-        _params.leftMargin = _squarePoints[0].getX();
-        _params.topMargin = _squarePoints[0].getY();
-        smile.setLayoutParams(_params);
 
-        _params.topMargin = _screenHeight / 2 - 150 + (int) (Math.cos(_angle) * 250);
         _runnableArray[1] = new Runnable() {
             @Override
             public void run() {
                 handler.postDelayed(this, _intevalSpeed);
 
 
-                if(_currentPoint.getX() - smile.getX() > 4)
+                if(_currentPoint.getX() - _smileX > 8)
                 {
-                    smile.setX(smile.getX()+5);
+                    _smileX += 10;
+                    smile.setX(_smileX);
                 }
-                else if (_currentPoint.getX() - smile.getX() < -4 )
+                else if (_currentPoint.getX() - _smileX < -8 )
                 {
-                    smile.setX(smile.getX()-5);
+                    _smileX -= 10;
+                    smile.setX(_smileX);
                 }
                 else
                 {
@@ -128,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     {
                         _reachedX = false;
                         _reachedY = false;
-                        _arrayPointInterator++;
+                        _arrayPointInterator +=_direction;
                         if(_arrayPointInterator >= 4)
                         {
                             _arrayPointInterator = 0;
@@ -148,13 +144,15 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                if(_currentPoint.getY() - smile.getY() > 4)
+                if(_currentPoint.getY() - _smileY > 8)
                 {
-                    smile.setY(smile.getY()+5);
+                    _smileY += 10;
+                    smile.setY(_smileY);
                 }
-                else if (_currentPoint.getY() - smile.getY() < -4 )
+                else if (_currentPoint.getY() - _smileY < -8 )
                 {
-                    smile.setY(smile.getY()-5);
+                    _smileY -= 10;
+                    smile.setY(_smileY);
                 }
                 else
                 {
@@ -162,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                     {
                         _reachedX = false;
                         _reachedY = false;
-                        ++_arrayPointInterator;
+                        _arrayPointInterator +=_direction;
                         if(_arrayPointInterator >= 4)
                         {
                             _arrayPointInterator = 0;
@@ -178,7 +176,6 @@ public class MainActivity extends AppCompatActivity {
                         _reachedY = true;
                     }
                 }
-                Log.e("goalx",_currentPoint.getX()+" , "+_currentPoint.getY());
             }
         };
 
@@ -186,58 +183,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 handler.postDelayed(this, _intevalSpeed);
-                if(_currentPoint.getX() - smile.getX() > 4)
+                if(_currentPoint.getX() - _smileX > 8)
                 {
-                    smile.setX(smile.getX()+5);
+                    _smileX += 10;
+                    smile.setX(_smileX);
                 }
-                else if (_currentPoint.getX() - smile.getX() < -4 )
+                else if (_currentPoint.getX() - _smileX < -8 )
                 {
-                    smile.setX(smile.getX()-5);
-                }
-                else
-                {
-                    if(_reachedY)
-                    {
-                        _reachedX = false;
-                        _reachedY = false;
-                        _arrayPointInterator++;
-                        _currentPoint = createRandomPoint();
-
-                    }
-                    else
-                    {
-                        _reachedX = true;
-
-                    }
-
-                }
-
-                if(_currentPoint.getY() - smile.getY() > 4)
-                {
-                    smile.setY(smile.getY()+5);
-                }
-                else if (_currentPoint.getY() - smile.getY() < -4 )
-                {
-                    smile.setY(smile.getY()-5);
+                    _smileX -= 10;
+                    smile.setX(_smileX);
                 }
                 else
                 {
-                    if(_reachedX)
-                    {
-                        _reachedX = false;
-                        _reachedY = false;
+                    _currentPoint = createRandomPoint();
 
-                        _currentPoint = createRandomPoint();
-                    }
-                    else
-                    {
-                        _reachedY = true;
-                    }
+                }
+
+                if(_currentPoint.getY() -_smileY > 8)
+                {
+                    _smileY += 10;
+                    smile.setY(_smileY);
+                }
+                else if (_currentPoint.getY() - _smileY < -8 )
+                {
+                    _smileY -= 10;
+                    smile.setY(_smileY);
+                }
+                else
+                {
+                    _currentPoint = createRandomPoint();
                 }
             }
         };
 
-        _currentRunnable = _runnableArray[2];
+        _currentRunnable = _runnableArray[0];
     }
 
     //TODO speed
@@ -246,7 +225,14 @@ public class MainActivity extends AppCompatActivity {
         _modeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Log.e("mode",_modeOptions[position]);
+                resetPostion();
+                handler.removeCallbacks(_currentRunnable);
+                _currentRunnable = _runnableArray[position];
+                if(position == 1)
+                {
+                    _currentPoint = _squarePoints[0];
+                }
+                interval();
 
             }
 
@@ -259,7 +245,8 @@ public class MainActivity extends AppCompatActivity {
         _speedSlider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                _speed = Double.valueOf(progress) / 1000;
+//                _speed = Double.valueOf(progress) / 1000;
+                _intevalSpeed = (100 - progress)/3;
             }
 
             @Override

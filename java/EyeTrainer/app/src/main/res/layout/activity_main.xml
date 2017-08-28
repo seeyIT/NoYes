@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="speed: " />
+        android:text="@string/speed" />
 
     <SeekBar
         android:id="@+id/speedSlider"
@@ -38,7 +38,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Mode: " />
+        android:text="@string/mode" />
 
     <Spinner
         android:id="@+id/modeSpinner"

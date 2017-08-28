@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EyeTrainer</string>
+    <string name="speed">Speed:</string>
+    <string name="mode">Mode:</string>
 </resources>
