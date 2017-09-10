@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Skillshot</string>
+    <string name="title_activity_va">vaActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_tttt_main2">ttttMain2Activity</string>
+    <string name="title_activity_mainqqqq2">Mainqqqq2Activity</string>
+    <string name="title_activity_aaaa">aaaaActivity</string>
+</resources>

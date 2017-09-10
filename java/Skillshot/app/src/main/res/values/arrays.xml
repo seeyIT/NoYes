@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="drawer_options">
+        <item>Oferty</item>
+        <item>Blog</item>
+        <item>Kontakt</item>
+        <item>Zaloguj się</item>
+    </string-array>
+</resources>
